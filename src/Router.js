@@ -16,7 +16,6 @@ import SignIn from './pages/SignIn/SignIn';
 import SignUp from './pages/SignUp/SignUp';
 import ViewSurroundingProducts from './pages/ViewSurroundingProducts/ViewSurroundingProducts';
 import Aside from './components/Aside/Aside';
-import './styles/common.scss';
 
 const Router = () => {
   return (
