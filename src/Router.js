@@ -16,6 +16,7 @@ import SignIn from './pages/SignIn/SignIn';
 import SignUp from './pages/SignUp/SignUp';
 import ViewSurroundingProducts from './pages/ViewSurroundingProducts/ViewSurroundingProducts';
 import Aside from './components/Aside/Aside';
+import Footer from './components/Footer/Footer';
 
 const Router = () => {
   return (
@@ -44,6 +45,7 @@ const Router = () => {
                 element={<ViewSurroundingProducts />}
               />
             </Routes>
+            <Footer />
           </div>
         </div>
       </div>
