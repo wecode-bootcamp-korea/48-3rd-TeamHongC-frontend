@@ -1,0 +1,55 @@
+@import '../../styles/variables.scss';
+
+.payment {
+  .paymentContainer {
+    padding: 60px 0 50px 0;
+
+    .paymentContainerWorkPlace {
+      padding: 0 30px;
+
+      .paymentContainerInfoTitle {
+        font-size: 20px;
+        padding: 20px 0;
+        border-bottom: 1px solid $greyD;
+      }
+
+      .paymentContainerProductInfo {
+        padding-bottom: 50px;
+
+        .paymentContainerProductDetail {
+          display: flex;
+          justify-content: space-between;
+          padding-top: 30px;
+
+          .paymentContainerProductTitle {
+            width: 70px;
+          }
+          .paymentContainerProductData {
+            text-align: end;
+            width: 120px;
+          }
+          .paymentContainerUserData {
+            text-align: end;
+            width: 150px;
+          }
+        }
+      }
+      .totalPaymentPadding {
+        padding-top: 150px;
+
+        .totalPaymentContainer {
+          display: flex;
+          justify-content: space-between;
+          font-size: 18px;
+          padding: 20px 0;
+          border-top: 1px solid $greyD;
+
+          .totalPaymentContainerPrice {
+            display: flex;
+            gap: 5px;
+          }
+        }
+      }
+    }
+  }
+}
