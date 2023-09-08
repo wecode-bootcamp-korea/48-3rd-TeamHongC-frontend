@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import KakaoCallback from './pages/Main/components/KakaoCallback';
 import Main from './pages/Main/Main';
 import BuyHistory from './pages/BuyHistory/BuyHistory';
 import MyPage from './pages/MyPage/MyPage';
@@ -26,6 +27,7 @@ const Router = () => {
           <Aside />
           <div className="container">
             <Routes>
+              <Route path="/callback-kakao" element={<KakaoCallback />} />
               <Route path="/" element={<Main />} />
               <Route path="/buyhistory" element={<BuyHistory />} />
               <Route path="/mypage" element={<MyPage />} />

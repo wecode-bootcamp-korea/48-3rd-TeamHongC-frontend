@@ -5,9 +5,7 @@ function KakaoCallback() {
   const [code, setCode] = useState('');
   const navigate = useNavigate();
 
-  /**
-   * @description 로그인하기
-   */
+  // 로그인하기
   const fetchLogin = useCallback(
     async code => {
       try {
@@ -36,26 +34,23 @@ function KakaoCallback() {
     [navigate],
   );
 
-  /**
-   * @description login API fetch
-   */
+  //login API fetch
   useEffect(() => {
     if (code) {
       fetchLogin(code);
     }
   }, [code, fetchLogin]);
 
-  /**
-   * @description code 값 가져오기
-   */
+  // code 값 가져오기
   useEffect(() => {
-    const Address = new URL(window.location.href); // url 가져오기
+    const Address = new URL(window.location.href);
+    // url 가져오기
     const code = Address.searchParams.get('code') || ''; // code value
 
     setCode(code);
   }, []);
 
-  //Router.js에 Callback routing 하기
+  //Router.js에 /callback-kakao Callback routing 하기
 
   return <div className="callback">Wait....</div>;
 }
