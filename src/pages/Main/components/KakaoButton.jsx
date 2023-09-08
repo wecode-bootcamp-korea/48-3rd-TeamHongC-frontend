@@ -2,14 +2,16 @@ import React from 'react';
 import './KakaoButton.scss';
 
 function KakaoButton() {
-  /**
-   * @description 카카오 인가코드를 받기위한 URL 가져오기
-   */
+  const kakaoKey = async () => {
+    const restApi = process.env.KAKAO_KEY;
+    const redirectUri = `http://localhost:3000/callback/kakao`;
+    return `https://kauth.kakao.com/oauth/authorize?client_id=${restApi}&redirect_uri=${redirectUri}&response_type=code`;
+  };
+
+  // 카카오 인가코드를 받기위한 URL 가져오기
   const fetchGetURL = async () => {
     try {
-      const { url } = await (
-        await fetch('http://localhost:3001/kakao/url')
-      ).json();
+      const url = await kakaoKey();
 
       console.log(url); // 응답으로 온 url
       document.location.href = url; // 페이지 이동
