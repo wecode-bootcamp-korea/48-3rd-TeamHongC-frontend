@@ -1,58 +1,47 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import LoggingIn from './LoggingIn';
 
 function KakaoCallback() {
-  const [code, setCode] = useState('');
   const navigate = useNavigate();
+  const Address = new URL(window.location.href);
+  const code = Address.searchParams.get('code') || '';
 
-  // 로그인하기
   const fetchLogin = useCallback(
     async code => {
       try {
-        const param = {
-          code,
-        };
-
         const response = await (
-          await fetch('http://localhost:3001/login', {
+          await fetch('http://localhost:3001/user/kakaologin', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
             },
-            body: JSON.stringify(param), // string으로 전달해야함
+            body: JSON.stringify({ code }),
           })
         ).json();
 
-        console.log(response); // { nickname: '#######' }
+        console.log(response);
 
-        navigate('/product-list'); // API 호출 성공 시 제품 리스트 페이지로 이동
+        navigate('/product-list');
       } catch (error) {
-        alert('Function fetchLogin error!');
+        alert('로그인 에러!');
         console.error(error);
       }
     },
     [navigate],
   );
 
-  //login API fetch
   useEffect(() => {
     if (code) {
       fetchLogin(code);
     }
   }, [code, fetchLogin]);
 
-  // code 값 가져오기
-  useEffect(() => {
-    const Address = new URL(window.location.href);
-    // url 가져오기
-    const code = Address.searchParams.get('code') || ''; // code value
-
-    setCode(code);
-  }, []);
-
-  //Router.js에 /callback-kakao Callback routing 하기
-
-  return <div className="callback">Wait....</div>;
+  return (
+    <div className="callback">
+      <LoggingIn />
+    </div>
+  );
 }
 
 export default KakaoCallback;
