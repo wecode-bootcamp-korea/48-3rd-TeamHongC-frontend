@@ -24,21 +24,18 @@ button {
     justify-content: center;
 
     .container {
-      position: relative;
-      display: flex;
-      flex-direction: column;
+      overflow: auto;
       width: 440px;
       height: 100vh;
       background-color: white;
       box-shadow:
         -1px 0px 10px 0px $greyD,
         1px 0px 10px 0px $greyD;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
   }
-}
-
-@mixin containerCommonStyle {
-  position: relative;
-  display: flex;
-  flex-direction: column;
 }
