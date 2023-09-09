@@ -1,0 +1,29 @@
+@import '../../styles/variables.scss';
+
+.setMyLocation + .footer {
+  display: none;
+}
+.container {
+  .setMyLocation {
+    .setMyLocationContainer {
+      padding: 0 0 40px;
+
+      #map {
+        width: 440px;
+        height: 100vh;
+      }
+      .mapMarker {
+        width: 100%;
+        padding: 4px 0 0 0;
+        font-size: 12px;
+      }
+      button {
+        position: sticky;
+        bottom: 20px;
+        left: 20px;
+        z-index: 1;
+        width: 400px;
+      }
+    }
+  }
+}
