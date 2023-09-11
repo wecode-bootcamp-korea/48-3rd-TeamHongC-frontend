@@ -2,10 +2,10 @@
 
 .payment {
   .paymentContainer {
-    padding: 60px 0 50px 0;
+    padding-bottom: 50px;
 
     .paymentContainerWorkPlace {
-      padding: 0 30px;
+      padding: 20px 30px;
 
       .paymentContainerInfoTitle {
         font-size: 20px;
@@ -24,18 +24,29 @@
           .paymentContainerProductTitle {
             width: 70px;
           }
+
+          .paymentButton {
+            background-color: white;
+            border: 1px solid $greyD;
+            border-radius: 100px;
+            padding: 5px 30px 3px 30px;
+
+            &:hover {
+              background-color: $greyD;
+            }
+          }
           .paymentContainerProductData {
             text-align: end;
-            width: 120px;
+            width: 130px;
           }
           .paymentContainerUserData {
             text-align: end;
-            width: 150px;
+            width: 140px;
           }
         }
       }
       .totalPaymentPadding {
-        padding-top: 150px;
+        padding-top: 80px;
 
         .totalPaymentContainer {
           display: flex;
@@ -48,6 +59,13 @@
             display: flex;
             gap: 5px;
           }
+        }
+      }
+
+      .paymentCompletedBtn {
+        padding-top: 10px;
+        button {
+          width: 380px;
         }
       }
     }

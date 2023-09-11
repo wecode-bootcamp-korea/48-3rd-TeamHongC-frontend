@@ -1,17 +1,31 @@
 import React from 'react';
 import './Payment.scss';
+import NavBack from '../../components/Nav/NavBack';
+import Button from '../../components/Button/Button';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 export default function Payment() {
   const paymentUserInfo = [
     { label: '이름', type: 'text', placeholder: '이름을 입력해주세요.' },
     {
       label: '전화번호',
-      type: 'number',
+      type: 'text',
       placeholder: '전화번호를 입력해주세요.',
     },
   ];
+
+  const titleText = '결제';
+  const btnText = '결제 완료';
+
+  const navigate = useNavigate();
+  const paymentCompletedBtn = () => {
+    navigate('/payment-completed');
+  };
+
   return (
     <div className="payment">
+      <NavBack title={titleText} />
       <div className="paymentContainer">
         <div className="paymentContainerWorkPlace">
           <div className="paymentContainerInfoTitle">상품 구매 정보</div>
@@ -48,7 +62,7 @@ export default function Payment() {
             </div>
             <div className="paymentContainerProductDetail">
               <div className="paymentContainerProductTitle">결제수단</div>
-              <button>카드결제</button>
+              <button className="paymentButton">카드결제</button>
             </div>
           </div>
 
@@ -60,6 +74,10 @@ export default function Payment() {
                 <div>원</div>
               </div>
             </div>
+          </div>
+
+          <div className="paymentCompletedBtn">
+            <Button text={btnText} onClick={paymentCompletedBtn} />
           </div>
         </div>
       </div>
