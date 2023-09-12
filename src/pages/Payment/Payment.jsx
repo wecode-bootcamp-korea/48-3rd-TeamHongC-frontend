@@ -62,7 +62,12 @@ export default function Payment() {
             </div>
             <div className="paymentContainerProductDetail">
               <div className="paymentContainerProductTitle">결제수단</div>
-              <button className="paymentButton">카드결제</button>
+              <button className="paymentButton">
+                <img
+                  src="/images/payment_icon_yellow_small.png"
+                  alt="이미지 불러오기 실패"
+                />
+              </button>
             </div>
           </div>
 

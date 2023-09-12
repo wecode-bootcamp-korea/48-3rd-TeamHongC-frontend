@@ -5,21 +5,21 @@
     padding-bottom: 50px;
 
     .paymentContainerWorkPlace {
-      padding: 20px 30px;
+      padding: 20px;
 
       .paymentContainerInfoTitle {
         font-size: 20px;
-        padding: 20px 0;
+        padding-bottom: 20px;
         border-bottom: 1px solid $greyD;
       }
 
       .paymentContainerProductInfo {
-        padding-bottom: 50px;
+        padding-bottom: 60px;
 
         .paymentContainerProductDetail {
           display: flex;
           justify-content: space-between;
-          padding-top: 30px;
+          padding-top: 35px;
 
           .paymentContainerProductTitle {
             width: 70px;
@@ -27,12 +27,11 @@
 
           .paymentButton {
             background-color: white;
-            border: 1px solid $greyD;
-            border-radius: 100px;
-            padding: 5px 30px 3px 30px;
+            border: none;
+            height: 25px;
 
-            &:hover {
-              background-color: $greyD;
+            img {
+              height: 25px;
             }
           }
           .paymentContainerProductData {
@@ -46,7 +45,7 @@
         }
       }
       .totalPaymentPadding {
-        padding-top: 80px;
+        padding-top: 70px;
 
         .totalPaymentContainer {
           display: flex;
