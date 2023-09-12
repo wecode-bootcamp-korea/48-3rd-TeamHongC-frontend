@@ -2,40 +2,57 @@
 
 .payment {
   .paymentContainer {
-    padding: 60px 0 50px 0;
+    padding-bottom: 50px;
 
     .paymentContainerWorkPlace {
-      padding: 0 30px;
+      padding: 20px;
 
       .paymentContainerInfoTitle {
         font-size: 20px;
-        padding: 20px 0;
+        padding-bottom: 20px;
         border-bottom: 1px solid $greyD;
       }
 
       .paymentContainerProductInfo {
-        padding-bottom: 50px;
+        padding-bottom: 60px;
 
         .paymentContainerProductDetail {
           display: flex;
           justify-content: space-between;
-          padding-top: 30px;
+          padding-top: 35px;
 
           .paymentContainerProductTitle {
             width: 70px;
           }
+
+          .paymentButton {
+            background-color: white;
+            border: none;
+            height: 25px;
+
+            img {
+              height: 25px;
+            }
+          }
           .paymentContainerProductData {
             text-align: end;
-            width: 120px;
+            width: 130px;
           }
+
+          .paymentContainerProductDataInput {
+            width: 40px;
+            text-align: end;
+            margin-right: 5px;
+          }
+
           .paymentContainerUserData {
             text-align: end;
-            width: 150px;
+            width: 140px;
           }
         }
       }
       .totalPaymentPadding {
-        padding-top: 150px;
+        padding-top: 70px;
 
         .totalPaymentContainer {
           display: flex;
@@ -48,6 +65,13 @@
             display: flex;
             gap: 5px;
           }
+        }
+      }
+
+      .paymentCompletedBtn {
+        padding-top: 10px;
+        button {
+          width: 380px;
         }
       }
     }
