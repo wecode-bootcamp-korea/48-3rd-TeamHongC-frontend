@@ -1,0 +1,216 @@
+@import '../../styles/variables.scss';
+
+.registerProduct {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .registerProductWrap {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding-bottom: 50px;
+
+    .imgContents {
+      display: flex;
+
+      .uploadBox {
+        display: flex;
+        margin-right: 17px;
+
+        label {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid $greyD;
+          border-radius: 4px;
+          padding: 10px;
+          width: 85px;
+          height: 85px;
+
+          &:hover {
+            border-color: $black;
+          }
+
+          img {
+            width: 40px;
+            cursor: pointer;
+          }
+
+          p {
+            margin-top: 5px;
+            font-size: 12px;
+            color: $black;
+          }
+        }
+
+        input {
+          display: none;
+        }
+      }
+
+      .imgPreviewsContainer {
+        display: flex;
+
+        .imgPreview {
+          margin-right: 19px;
+          display: flex;
+          border: 1px solid $greyD;
+          border-radius: 4px;
+          width: 85px;
+          height: 85px;
+
+          .preview {
+            width: 100%;
+            height: 100%;
+          }
+
+          .remove {
+            width: 20px;
+            height: 20px;
+            margin-top: -8px;
+            margin-left: -10px;
+          }
+        }
+      }
+    }
+
+    .registerProductInput {
+      margin-top: 20px;
+      width: 100%;
+
+      h2 {
+        display: inline-block;
+        margin-bottom: 5px;
+        font-size: 14px;
+        font-weight: 600;
+        color: $grey9;
+      }
+
+      p {
+        margin-left: 10px;
+        display: inline-block;
+        color: $green;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      input {
+        width: 99%;
+        height: 30px;
+        border: 1px solid $greyD;
+        border-radius: 4px;
+        margin-bottom: 15px;
+        padding-left: 5px;
+
+        &:focus {
+          outline: none;
+          caret-color: $grey9;
+        }
+
+        &:hover {
+          border-color: $black;
+        }
+
+        &:active {
+          border-color: $black;
+        }
+
+        &:not(:placeholder-shown) {
+          border-color: $black;
+        }
+      }
+
+      textarea {
+        width: 99%;
+        height: 200px;
+        margin-bottom: 20px;
+        border: 1px solid $greyD;
+        border-radius: 4px;
+        resize: none;
+
+        &:hover {
+          border-color: $black;
+        }
+
+        &:focus {
+          outline: none;
+          caret-color: $grey9;
+        }
+
+        &:not(:placeholder-shown) {
+          border-color: $black;
+        }
+      }
+
+      .categoryBtn {
+        margin-top: -15px;
+        margin-bottom: 30px;
+
+        .category,
+        .itemCondition {
+          margin-top: 8px;
+
+          ul {
+            display: flex;
+            flex-direction: row;
+
+            li {
+              margin-right: 2px;
+
+              .notSelect {
+                font-size: 13px;
+                color: $grey6;
+                border: 1px solid $greyD;
+                border-radius: 100px;
+                padding: 5px 10px;
+                background-color: #fff;
+
+                &:hover {
+                  border-color: $black;
+                  color: $black;
+                }
+              }
+
+              .selected {
+                font-size: 13px;
+                color: #fff;
+                border: 1px solid #5b975b;
+                border-radius: 100px;
+                padding: 5px 10px;
+                background-color: #5b975b;
+              }
+            }
+          }
+        }
+      }
+
+      .priceInput,
+      .quantityInput {
+        .inputWithSuffix {
+          display: flex;
+          align-items: center;
+          position: relative;
+
+          input {
+            padding-right: 20px;
+          }
+
+          span {
+            position: absolute;
+            left: 94%;
+            font-size: 14px;
+            color: $black;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+    .registerBtn {
+      .greenBtnDisabled {
+        background: #6b8263;
+      }
+    }
+  }
+}
