@@ -1,0 +1,37 @@
+@import '../../styles/variables.scss';
+
+.productList {
+  .productListContainer {
+    padding: 20px 20px 80px;
+
+    .setLocation {
+      display: flex;
+      font-weight: bold;
+      margin-bottom: 15px;
+
+      .locationIcon {
+        font-size: 20px;
+        margin-right: 5px;
+      }
+    }
+
+    .products {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid $greyF;
+
+      .sorting {
+        font-size: 13px;
+        text-align: right;
+        margin-right: 3px;
+        color: $grey6;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@import '../../styles/variables.scss';
+
+.list {
+  width: 190px;
+  margin-right: 20px;
+  margin-top: 20px;
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+  .listImg {
+    position: relative;
+    width: 190px;
+    height: 190px;
+    border: 1px solid $greyF;
+    border-radius: 5px;
+    overflow: hidden;
+
+    .thumbnail {
+      width: 190px;
+      height: 190px;
+    }
+
+    .likeIcon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 26px;
+      cursor: pointer;
+    }
+  }
+
+  .productInfo {
+    padding: 10px 3px;
+
+    .productTitle {
+      margin-bottom: 6px;
+    }
+
+    .productSubInfo {
+      display: flex;
+      font-size: 12px;
+      color: $grey9;
+      margin-bottom: 10px;
+
+      .review {
+        margin-left: 3px;
+      }
+    }
+
+    .productPrice {
+      text-align: right;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+}
