@@ -1,0 +1,41 @@
+@import '../../styles/variables.scss';
+
+.buyHistory {
+  .buyHistoryList {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+
+    .buyList {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      width: 100%;
+
+      .productTitle {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px;
+        font-size: 16px;
+
+        .productPrice {
+          font-weight: 600;
+        }
+      }
+
+      .paymentBgColor {
+        margin: 0 20px;
+        background-color: $greyF;
+        border-top: 1px solid $greyD;
+        border-bottom: 1px solid $greyD;
+        font-size: 14px;
+
+        .payment {
+          margin: 20px 10px;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
