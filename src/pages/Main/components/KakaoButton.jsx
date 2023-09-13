@@ -15,7 +15,7 @@ function KakaoButton() {
       console.log(url);
       document.location.href = url;
     } catch (error) {
-      alert('카카오로 시작하기 에러!');
+      alert('로그인 에러!');
       console.error(error);
     }
   };
