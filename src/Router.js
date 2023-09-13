@@ -37,7 +37,7 @@ const Router = () => {
               <Route path="/payment-completed" element={<PaymentCompleted />} />
               <Route path="/payment-failed" element={<PaymentFailed />} />
               <Route path="/payment-cancel" element={<PaymentCancel />} />
-              <Route path="/product-detail" element={<ProductDetail />} />
+              <Route path="/product-detail/:id" element={<ProductDetail />} />
               <Route path="/product-list" element={<ProductList />} />
               <Route path="/register-product" element={<RegisterProduct />} />
               <Route path="/sales-edit" element={<SalesEdit />} />

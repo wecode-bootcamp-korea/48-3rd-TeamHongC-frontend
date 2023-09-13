@@ -1,0 +1,24 @@
+{
+  "data": {
+    "id": 1,
+    "nickname": 123123,
+    "title": "옷",
+    "itemCondition": 1,
+    "description": "상품정보가 없어요",
+    "price": "100,000원",
+    "itemCount": 1,
+    "region": "서울 강남구",
+    "date": "1일 전",
+    "image": [
+      {
+        "imageUrl": "https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E"
+      },
+      {
+        "imageUrl": "https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E"
+      },
+      {
+        "imageUrl": "https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E"
+      }
+    ]
+  }
+}
