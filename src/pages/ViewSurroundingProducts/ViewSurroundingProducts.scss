@@ -1,0 +1,22 @@
+@import '../../styles/variables.scss';
+
+.viewSurroundingProducts + .footer {
+  display: none;
+}
+.container {
+  .viewSurroundingProducts {
+    .infoWindow {
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+    }
+    .view {
+      padding: 0 0 40px;
+
+      #map {
+        width: 440px;
+        height: 100vh;
+      }
+    }
+  }
+}

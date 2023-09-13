@@ -9,7 +9,8 @@
     "like": 2,
     "price": 10000,
     "item_count": 1,
-    "location": "x=123, y=123, adress=세종시",
+    "x": 127.04956080423412,
+    "y": 37.50318706172855,
     "created_at": "2023-09-12T02:37:27.000Z",
     "updated_at": "2023-09-12T02:37:27.000Z",
     "imgUrl": "https://cdn.pixabay.com/photo/2018/05/29/23/18/potato-3440360_1280.jpg"
@@ -24,7 +25,8 @@
     "like": 2,
     "price": 10000,
     "item_count": 1,
-    "location": "x=123, y=123, adress=세종시",
+    "x": 127.050974747441,
+    "y": 37.50357389242249,
     "created_at": "2023-09-12T02:37:27.000Z",
     "updated_at": "2023-09-12T02:37:27.000Z",
     "imgUrl": "https://cdn.pixabay.com/photo/2017/11/30/08/56/ice-cream-2987955_1280.jpg"
@@ -39,7 +41,8 @@
     "like": 2,
     "price": 10000,
     "item_count": 1,
-    "location": "x=123, y=123, adress=세종시",
+    "x": 127.05210041801129,
+    "y": 37.50411400457635,
     "created_at": "2023-09-12T02:37:27.000Z",
     "updated_at": "2023-09-12T02:37:27.000Z",
     "imgUrl": "https://cdn.pixabay.com/photo/2021/01/06/07/52/lipsticks-5893480_1280.jpg"
@@ -54,7 +57,8 @@
     "like": 2,
     "price": 10000,
     "item_count": 1,
-    "location": "x=123, y=123, adress=세종시",
+    "x": 127.052745586895,
+    "y": 37.50485704766878,
     "created_at": "2023-09-12T02:37:27.000Z",
     "updated_at": "2023-09-12T02:37:27.000Z",
     "imgUrl": "https://cdn.pixabay.com/photo/2014/06/18/18/41/running-shoe-371624_1280.jpg"
@@ -69,7 +73,8 @@
     "like": 2,
     "price": 10000,
     "item_count": 1,
-    "location": "x=123, y=123, adress=세종시",
+    "x": 127.0532605266252,
+    "y": 37.505347864476484,
     "created_at": "2023-09-12T02:37:27.000Z",
     "updated_at": "2023-09-12T02:37:27.000Z",
     "imgUrl": "https://cdn.pixabay.com/photo/2017/02/08/11/15/egg-2048476_1280.jpg"
@@ -84,7 +89,8 @@
     "like": 2,
     "price": 10000,
     "item_count": 1,
-    "location": "x=123, y=123, adress=세종시",
+    "x": 127.0521699965034,
+    "y": 37.50658723316996,
     "created_at": "2023-09-12T02:37:27.000Z",
     "updated_at": "2023-09-12T02:37:27.000Z",
     "imgUrl": "/images/nav_logo.png"
@@ -99,7 +105,8 @@
     "like": 2,
     "price": 10000,
     "item_count": 1,
-    "location": "x=123, y=123, adress=세종시",
+    "x": 127.05340293839818,
+    "y": 37.50680742843336,
     "created_at": "2023-09-12T02:37:27.000Z",
     "updated_at": "2023-09-12T02:37:27.000Z",
     "imgUrl": "https://cdn.pixabay.com/photo/2010/12/16/11/52/stilton-blue-cheese-3491_1280.jpg"
