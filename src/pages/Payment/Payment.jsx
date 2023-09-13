@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Payment.scss';
 import NavBack from '../../components/Nav/NavBack';
 import Button from '../../components/Button/Button';
@@ -23,6 +23,40 @@ export default function Payment() {
     navigate('/payment-completed');
   };
 
+  const [paymentInfo, setPaymentInfo] = useState({});
+
+  const paymentToKakao = () => {
+    const requestData = {
+      totalPayment,
+    };
+
+    axios
+      .post(`backEndURL`, requestData)
+      .then(({ response }) => {
+        const {} = response;
+        setPaymentInfo({
+          ...paymentInfo,
+        });
+      })
+      .catch(error => {
+        console.error('데이터 가져오기 실패:', error);
+      });
+  };
+
+  const [minValue, setMinValue] = useState(1);
+
+  const handleMinValueChange = event => {
+    const newValue = parseInt(event.target.value, 10);
+
+    if (isNaN(newValue) || newValue < 1) {
+      alert('최소 수량은 1개 입니다.');
+    } else {
+      setMinValue(newValue);
+    }
+  };
+
+  const totalPayment = paymentInfo.paymentPrice + 1000 * minValue;
+
   return (
     <div className="payment">
       <NavBack title={titleText} />
@@ -32,15 +66,21 @@ export default function Payment() {
           <div className="paymentContainerProductInfo">
             <div className="paymentContainerProductDetail">
               <div className="paymentContainerProductTitle">상품명</div>
-              <div className="paymentContainerProductData">productListData</div>
+              <div className="paymentContainerProductData">
+                {paymentInfo.productName}
+              </div>
             </div>
             <div className="paymentContainerProductDetail">
               <div className="paymentContainerProductTitle">구매수량</div>
-              <input
-                className="paymentContainerProductData"
-                type="number"
-                placeholder="수량을 입력해주세요."
-              />
+              <div>
+                <input
+                  className="paymentContainerProductDataInput"
+                  type="number"
+                  value={minValue}
+                  onChange={handleMinValueChange}
+                />
+                개
+              </div>
             </div>
           </div>
 
@@ -62,7 +102,7 @@ export default function Payment() {
             </div>
             <div className="paymentContainerProductDetail">
               <div className="paymentContainerProductTitle">결제수단</div>
-              <button className="paymentButton">
+              <button className="paymentButton" onClick={paymentToKakao}>
                 <img
                   src="/images/payment_icon_yellow_small.png"
                   alt="이미지 불러오기 실패"
@@ -75,7 +115,7 @@ export default function Payment() {
             <div className="totalPaymentContainer">
               <div className="totalPaymentContainerTitle">총 결제 금액</div>
               <div className="totalPaymentContainerPrice">
-                <div>totalPayment</div>
+                <div>{totalPayment}</div>
                 <div>원</div>
               </div>
             </div>
