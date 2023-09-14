@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { IoIosArrowBack } from 'react-icons/io';
 import './ProductDetail.scss';
 import Button from '../../components/Button/Button';
@@ -8,6 +8,8 @@ import FadeSilder from './FadeSilder';
 
 export default function ProductDetail() {
   const [detailData, setDetailData] = useState({});
+  const params = useParams();
+  const id = params.id;
 
   const navigate = useNavigate();
   const goToBack = () => {
@@ -24,7 +26,10 @@ export default function ProductDetail() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get('/data/productDetail.json');
+        const res = await axios.get(
+          `http://10.58.52.191:3000/product-detail/${id}`,
+        );
+        // /data/productDetail.json
         setDetailData(res.data.data);
       } catch (error) {
         console.error('데이터 불러오기 실패:', error);
@@ -38,7 +43,7 @@ export default function ProductDetail() {
 
   if (hasData) return null;
 
-  const itemCondition = detailData.itemCondition === 1 ? '중고' : '새상품';
+  const itemCondition = detailData.itemCondition === 1 ? '신상품' : '중고';
 
   return (
     <div className="productDetail">
