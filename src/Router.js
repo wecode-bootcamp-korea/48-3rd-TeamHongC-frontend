@@ -4,6 +4,7 @@ import KakaoCallback from './pages/Main/components/KakaoCallback';
 import Main from './pages/Main/Main';
 import BuyHistory from './pages/BuyHistory/BuyHistory';
 import MyPage from './pages/MyPage/MyPage';
+import ProfileEdit from './pages/ProfileEdit/ProfileEdit';
 import Payment from './pages/Payment/Payment';
 import PaymentCompleted from './pages/PaymentCompleted/PaymentCompleted';
 import PaymentFailed from './pages/PaymentFailed/PaymentFailed';
@@ -33,6 +34,7 @@ const Router = () => {
               <Route path="/" element={<Main />} />
               <Route path="/buyhistory" element={<BuyHistory />} />
               <Route path="/mypage" element={<MyPage />} />
+              <Route path="/profileEdit" element={<ProfileEdit />} />
               <Route path="/payment" element={<Payment />} />
               <Route path="/payment-completed" element={<PaymentCompleted />} />
               <Route path="/payment-failed" element={<PaymentFailed />} />

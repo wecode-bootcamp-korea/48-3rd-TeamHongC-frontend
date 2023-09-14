@@ -24,6 +24,7 @@
     }
 
     .salesMark {
+      transform: translateY(9%);
       margin-left: 5px;
       width: 14px;
       height: 14px;
@@ -34,11 +35,17 @@
     display: flex;
 
     button {
+      padding: 5px 10px;
       border: 1px solid $greyD;
       border-radius: 25px;
       background-color: white;
       font-size: 12px;
       color: $grey9;
+    }
+
+    button:hover {
+      border: 1px solid $black;
+      color: $black;
     }
   }
 }

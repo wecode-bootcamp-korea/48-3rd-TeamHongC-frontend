@@ -1,12 +1,23 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Profile.scss';
 
-export default function Profile() {
+export default function Profile({ profileData }) {
+  const navigate = useNavigate();
+
+  const goToProfileEdit = () => {
+    navigate('/profileEdit');
+  };
+
   return (
     <div className="profile">
       <div className="profileName">
-        <img className="profileImg" src="/images/user.png" alt="프로필 사진" />
-        <p>닉네임</p>
+        <img
+          className="profileImg"
+          src={profileData.nickname}
+          alt="프로필 사진"
+        />
+        <p>{profileData.nickname}</p>
         <img
           className="salesMark"
           src="/images/sales-mark.png"
@@ -14,7 +25,7 @@ export default function Profile() {
         />
       </div>
       <div className="profileBtn">
-        <button>프로필 수정</button>
+        <button onClick={goToProfileEdit}>프로필 수정</button>
       </div>
     </div>
   );
