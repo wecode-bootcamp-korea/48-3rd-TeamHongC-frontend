@@ -16,6 +16,18 @@
       #map {
         width: 440px;
         height: 100vh;
+
+        .productInfo {
+          min-width: 200px;
+          width: 100%;
+          height: 100%;
+          padding: 10px;
+
+          .productInfoTxt {
+            margin-bottom: 5px;
+            font-size: 13px;
+          }
+        }
       }
     }
   }
