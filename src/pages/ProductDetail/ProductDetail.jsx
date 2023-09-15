@@ -9,13 +9,12 @@ import FadeSilder from './FadeSilder';
 export default function ProductDetail() {
   const [detailData, setDetailData] = useState({});
   const params = useParams();
-  const id = params.id;
+  const productId = params.id;
 
   const navigate = useNavigate();
   const goToBack = () => {
     navigate(-1);
   };
-  console.log(detailData);
 
   const goToPaymentBtn = () => {
     navigate('/payment');
@@ -27,9 +26,8 @@ export default function ProductDetail() {
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          `http://10.58.52.191:3000/product-detail/${id}`,
+          `http://10.58.52.191:3000/product-detail/${productId}`,
         );
-        // /data/productDetail.json
         setDetailData(res.data.data);
       } catch (error) {
         console.error('데이터 불러오기 실패:', error);
