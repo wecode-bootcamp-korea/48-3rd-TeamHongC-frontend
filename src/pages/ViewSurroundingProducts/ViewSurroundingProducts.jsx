@@ -6,16 +6,14 @@ import NavBack from '../../components/Nav/NavBack';
 import './ViewSurroundingProducts.scss';
 
 const ViewSurroundingProducts = () => {
+  const { kakao } = window;
   const navigate = useNavigate();
   const location = useLocation();
   const [searchParams, setSearchParams] = useSearchParams();
   const [productList, setProductList] = useState([]);
 
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedContent, setSelectedContent] = useState(null);
-  const [currentlocation, setCurrentLoacation] = useState(null);
 
-  const { kakao } = window;
   const [state, setState] = useState({
     center: {
       lat: 33.450701,
@@ -62,7 +60,7 @@ const ViewSurroundingProducts = () => {
         isLoading: false,
       }));
     }
-  }, [searchParams, navigate, location]);
+  }, []);
 
   useEffect(() => {
     axios
@@ -74,6 +72,22 @@ const ViewSurroundingProducts = () => {
         console.error('데이터를 불러오는 데 실패했습니다.', error);
       });
   }, []);
+
+  // useEffect(() => {
+  //   const url = `http://10.58.52.64:3000/my/surround?${searchParams}`;
+
+  //   async function fetchData() {
+  //     try {
+  //       const response = await axios.get(url);
+  //       setProductList(response.data.data);
+  //       console.log(response.data.data);
+  //     } catch (error) {
+  //       console.error('데이터를 불러오는 데 실패했습니다.', error);
+  //     }
+  //   }
+
+  //   fetchData();
+  // }, []);
 
   const EventMarkerContainer = ({ position, content, id }) => {
     const map = useMap();
@@ -115,8 +129,16 @@ const ViewSurroundingProducts = () => {
             <EventMarkerContainer
               id={value.id}
               key={`EventMarkerContainer-${value.y}-${value.x}`}
+              // key={`EventMarkerContainer-${value.latitude}-${value.longitude}`}
+              // position={{ lat: value.latitude, lng: value.longitude }}
               position={{ lat: value.y, lng: value.x }}
-              content={value.title}
+              content={
+                <div className="productInfo">
+                  <p className="productInfoTxt">상품명 | {value.title}</p>
+                  <p className="productInfoTxt">금액 | {value.price}원</p>
+                  {/* <p>{value.imgUrl}</p> */}
+                </div>
+              }
             />
           ))}
         </Map>
