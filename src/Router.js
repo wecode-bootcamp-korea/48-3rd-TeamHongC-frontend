@@ -6,6 +6,8 @@ import BuyHistory from './pages/BuyHistory/BuyHistory';
 import MyPage from './pages/MyPage/MyPage';
 import Payment from './pages/Payment/Payment';
 import PaymentCompleted from './pages/PaymentCompleted/PaymentCompleted';
+import PaymentFailed from './pages/PaymentCompleted/PaymentFailed';
+import PaymentCancel from './pages/PaymentCompleted/PaymentCancels';
 import ProductDetail from './pages/ProductDetail/ProductDetail';
 import ProductList from './pages/ProductList/ProductList';
 import RegisterProduct from './pages/RegisterProduct/RegisterProduct';
@@ -33,6 +35,8 @@ const Router = () => {
               <Route path="/mypage" element={<MyPage />} />
               <Route path="/payment" element={<Payment />} />
               <Route path="/payment-completed" element={<PaymentCompleted />} />
+              <Route path="/payment-failed" element={<PaymentFailed />} />
+              <Route path="/payment-cancel" element={<PaymentCancel />} />
               <Route path="/product-detail" element={<ProductDetail />} />
               <Route path="/product-list" element={<ProductList />} />
               <Route path="/register-product" element={<RegisterProduct />} />
