@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import NavBack from '../../components/Nav/NavBack';
-import Button from '../../components/Button/Button';
+import NavBack from '../../../components/Nav/NavBack';
+import Button from '../../../components/Button/Button';
 import './PaymentCompleted.scss';
 
 export default function PaymentCompleted() {

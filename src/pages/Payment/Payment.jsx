@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
-import './Payment.scss';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 import NavBack from '../../components/Nav/NavBack';
 import Button from '../../components/Button/Button';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import './Payment.scss';
 
 export default function Payment() {
+  const { id: productId } = useParams();
+  const [paymentInfo, setPaymentInfo] = useState({});
+  const [quantity, setQuantity] = useState(1);
+
   const paymentUserInfo = [
     { label: '이름', type: 'text', placeholder: '이름을 입력해주세요.' },
     {
@@ -15,51 +19,62 @@ export default function Payment() {
     },
   ];
 
-  const titleText = '결제';
-  const btnText = '결제 완료';
-
-  const navigate = useNavigate();
-  const paymentCompletedBtn = () => {
-    navigate('/payment-completed');
-  };
-
-  const [paymentInfo, setPaymentInfo] = useState({});
-
   const paymentToKakao = () => {
     const requestData = {
-      totalPayment,
+      userId: '1',
+      quantity: quantity,
+      itemId: productId,
+      itemName: callBackName,
+      totalAmount: totalPayment,
+      approvalUrl: 'http://localhost:3000/payment-redirect',
+      cancelUrl: 'http://localhost:3000/payment-cancel',
+      failUrl: 'http://localhost:3000/payment-failed',
     };
 
     axios
-      .post(`backEndURL`, requestData)
-      .then(({ response }) => {
-        const {} = response;
-        setPaymentInfo({
-          ...paymentInfo,
-        });
+      .post('http://localhost:3001/payment/paid', requestData, {
+        headers: {
+          'Content-Type': 'application/json;charset=utf-8',
+          // Authorization: localStorage.getItem('token'),
+        },
+      })
+      .then(({ data }) => {
+        window.location.href = data.redirectUrl;
       })
       .catch(error => {
         console.error('데이터 가져오기 실패:', error);
       });
   };
 
-  const [minValue, setMinValue] = useState(1);
-
-  const handleMinValueChange = event => {
+  const handleQuantity = event => {
     const newValue = parseInt(event.target.value, 10);
-
     if (isNaN(newValue) || newValue < 1) {
       alert('최소 수량은 1개 입니다.');
     } else {
-      setMinValue(newValue);
+      setQuantity(newValue);
     }
   };
 
-  const totalPayment = paymentInfo.paymentPrice + 1000 * minValue;
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(
+          `http://localhost:3001/payment/${productId}`,
+        );
+        setPaymentInfo(res.data);
+      } catch (error) {
+        console.error('데이터 불러오기 실패:', error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  const totalPayment = paymentInfo?.price * quantity;
+  const callBackName = paymentInfo?.productName;
 
   return (
     <div className="payment">
-      <NavBack title={titleText} />
+      <NavBack title="결제" />
       <div className="paymentContainer">
         <div className="paymentContainerWorkPlace">
           <div className="paymentContainerInfoTitle">상품 구매 정보</div>
@@ -67,7 +82,7 @@ export default function Payment() {
             <div className="paymentContainerProductDetail">
               <div className="paymentContainerProductTitle">상품명</div>
               <div className="paymentContainerProductData">
-                {paymentInfo.productName}
+                {paymentInfo?.productName}
               </div>
             </div>
             <div className="paymentContainerProductDetail">
@@ -76,14 +91,13 @@ export default function Payment() {
                 <input
                   className="paymentContainerProductDataInput"
                   type="number"
-                  value={minValue}
-                  onChange={handleMinValueChange}
+                  value={quantity}
+                  onChange={handleQuantity}
                 />
                 개
               </div>
             </div>
           </div>
-
           <div className="paymentContainerInfoTitle">구매자 정보</div>
           <div className="paymentContainerProductInfo">
             <div>
@@ -102,15 +116,12 @@ export default function Payment() {
             </div>
             <div className="paymentContainerProductDetail">
               <div className="paymentContainerProductTitle">결제수단</div>
-              <button className="paymentButton" onClick={paymentToKakao}>
-                <img
-                  src="/images/payment_icon_yellow_small.png"
-                  alt="이미지 불러오기 실패"
-                />
-              </button>
+              <img
+                src="/images/payment_icon_yellow_small.png"
+                alt="이미지 불러오기 실패"
+              />
             </div>
           </div>
-
           <div className="totalPaymentPadding">
             <div className="totalPaymentContainer">
               <div className="totalPaymentContainerTitle">총 결제 금액</div>
@@ -120,9 +131,8 @@ export default function Payment() {
               </div>
             </div>
           </div>
-
           <div className="paymentCompletedBtn">
-            <Button text={btnText} onClick={paymentCompletedBtn} />
+            <Button text="카카오페이로 결제하기" onClick={paymentToKakao} />
           </div>
         </div>
       </div>
