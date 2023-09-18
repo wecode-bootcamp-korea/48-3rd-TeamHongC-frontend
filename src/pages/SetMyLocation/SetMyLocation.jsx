@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { Map, MapTypeControl, MapMarker } from 'react-kakao-maps-sdk';
 import NavBack from '../../components/Nav/NavBack';
 import Button from '../../components/Button/Button';
@@ -6,6 +7,7 @@ import './SetMyLocation.scss';
 
 const SetMyLocation = () => {
   const { kakao } = window;
+  const [searchParams, setSearchParams] = useSearchParams();
   const [positionAddress, setPositionAddress] = useState('');
   const [position, setPosition] = useState();
   const [location, setLoacation] = useState(null);
@@ -128,15 +130,12 @@ const SetMyLocation = () => {
     }
   };
 
-  const locationSettingComplete = () => {
-    console.log('y : ', position.lat);
-    console.log('x : ', position.lng);
-    const userRegion = region1depthName + ` ${region2depthName}`;
-    console.log('지역명: ', userRegion);
-
-    // axios.post('api주소').then(response=>{
-    //   setData(reponse.data);
-    // });
+  const locationSettingComplete = e => {
+    e.preventDefault();
+    searchParams.set('x', position.lng);
+    searchParams.set('y', position.lat);
+    setSearchParams(searchParams);
+    // navigate(`/register-product?x=`);
   };
 
   return (
