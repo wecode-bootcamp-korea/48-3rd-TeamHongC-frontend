@@ -4,9 +4,12 @@
   width: 190px;
   margin-right: 20px;
   margin-top: 20px;
+  cursor: pointer;
+
   &:nth-child(2n) {
     margin-right: 0;
   }
+
   .listImg {
     position: relative;
     width: 190px;
@@ -20,8 +23,9 @@
       height: 190px;
     }
 
-    .likeIcon {
+    .heartButton {
       position: absolute;
+      z-index: 2;
       top: 10px;
       right: 10px;
       font-size: 26px;
