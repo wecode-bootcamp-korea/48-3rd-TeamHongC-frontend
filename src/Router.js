@@ -14,7 +14,7 @@ import ProductList from './pages/ProductList/ProductList';
 import RegisterProduct from './pages/RegisterProduct/RegisterProduct';
 import SalesEdit from './pages/SalesEdit/SalesEdit';
 import SalesHistory from './pages/SalesHistory/SalesHistory';
-import SearchModal from './pages/SearchModal/SearchModal';
+import SearchResult from './pages/SearchResult/SearchResult';
 import SetMyLocation from './pages/SetMyLocation/SetMyLocation';
 import SignIn from './pages/SignIn/SignIn';
 import SignUp from './pages/SignUp/SignUp';
@@ -44,7 +44,7 @@ const Router = () => {
               <Route path="/register-product" element={<RegisterProduct />} />
               <Route path="/sales-edit" element={<SalesEdit />} />
               <Route path="/sales-history" element={<SalesHistory />} />
-              <Route path="/search-modal" element={<SearchModal />} />
+              <Route path="/search-result" element={<SearchResult />} />
               <Route path="/set-my-location" element={<SetMyLocation />} />
               <Route path="/sign-in" element={<SignIn />} />
               <Route path="/sign-up" element={<SignUp />} />
