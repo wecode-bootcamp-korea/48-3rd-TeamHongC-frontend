@@ -31,8 +31,8 @@ const ViewSurroundingProducts = () => {
           setState(prev => ({
             ...prev,
             center: {
-              lat: position.coords.latitude, // 위도
-              lng: position.coords.longitude, // 경도
+              lat: position.coords.latitude,
+              lng: position.coords.longitude,
             },
             isLoading: false,
           }));
@@ -63,31 +63,19 @@ const ViewSurroundingProducts = () => {
   }, []);
 
   useEffect(() => {
-    axios
-      .get('/data/productList.json')
-      .then(response => {
-        setProductList(response.data);
-      })
-      .catch(error => {
+    const url = `http://10.58.52.64:3000/my/surround?${searchParams}`;
+
+    async function fetchData() {
+      try {
+        const response = await axios.get(url);
+        setProductList(response.data.data);
+      } catch (error) {
         console.error('데이터를 불러오는 데 실패했습니다.', error);
-      });
+      }
+    }
+
+    fetchData();
   }, []);
-
-  // useEffect(() => {
-  //   const url = `http://10.58.52.64:3000/my/surround?${searchParams}`;
-
-  //   async function fetchData() {
-  //     try {
-  //       const response = await axios.get(url);
-  //       setProductList(response.data.data);
-  //       console.log(response.data.data);
-  //     } catch (error) {
-  //       console.error('데이터를 불러오는 데 실패했습니다.', error);
-  //     }
-  //   }
-
-  //   fetchData();
-  // }, []);
 
   const EventMarkerContainer = ({ position, content, id }) => {
     const map = useMap();
@@ -128,15 +116,18 @@ const ViewSurroundingProducts = () => {
           {productList.map(value => (
             <EventMarkerContainer
               id={value.id}
-              key={`EventMarkerContainer-${value.y}-${value.x}`}
-              // key={`EventMarkerContainer-${value.latitude}-${value.longitude}`}
-              // position={{ lat: value.latitude, lng: value.longitude }}
-              position={{ lat: value.y, lng: value.x }}
+              key={`EventMarkerContainer-${value.latitude}-${value.longitude}`}
+              position={{ lat: value.latitude, lng: value.longitude }}
               content={
                 <div className="productInfo">
-                  <p className="productInfoTxt">상품명 | {value.title}</p>
-                  <p className="productInfoTxt">금액 | {value.price}원</p>
-                  {/* <p>{value.imgUrl}</p> */}
+                  <img
+                    src="https://t4.ftcdn.net/jpg/06/21/43/29/240_F_621432994_wFMAaVvGbXkqvy6t5w4CSY3r3zHpiQCb.jpg"
+                    className="productInfoImg"
+                  />
+                  <div className="productText">
+                    <p className="productInfoTxt">상품명 | {value.title}</p>
+                    <p className="productInfoTxt">금액 | {value.price}원</p>
+                  </div>
                 </div>
               }
             />

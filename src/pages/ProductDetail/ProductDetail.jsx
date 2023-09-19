@@ -27,8 +27,8 @@ export default function ProductDetail() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const productRes = await axios.get(
-          `http://localhost:3001/product-detail/${productId}`,
+        const res = await axios.get(
+          `http://10.58.52.64:3000/product-detail/${productId}`,
         );
         setDetailData(productRes.data.data);
 
