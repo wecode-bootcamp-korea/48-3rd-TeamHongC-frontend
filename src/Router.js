@@ -6,9 +6,10 @@ import BuyHistory from './pages/BuyHistory/BuyHistory';
 import MyPage from './pages/MyPage/MyPage';
 import ProfileEdit from './pages/ProfileEdit/ProfileEdit';
 import Payment from './pages/Payment/Payment';
-import PaymentCompleted from './pages/PaymentCompleted/PaymentCompleted';
-import PaymentFailed from './pages/PaymentFailed/PaymentFailed';
-import PaymentCancel from './pages/PaymentCancel/PaymentCancel';
+import PaymentCompleted from './pages/Payment/PaymentCompleted/PaymentCompleted';
+import PaymentRedirect from './pages/Payment/PaymentRedirect/PaymentRedirect';
+import PaymentFailed from './pages/Payment/PaymentFailed/PaymentFailed';
+import PaymentCancel from './pages/Payment/PaymentCancel/PaymentCancel';
 import ProductDetail from './pages/ProductDetail/ProductDetail';
 import ProductList from './pages/ProductList/ProductList';
 import RegisterProduct from './pages/RegisterProduct/RegisterProduct';
@@ -35,8 +36,9 @@ const Router = () => {
               <Route path="/buyhistory" element={<BuyHistory />} />
               <Route path="/mypage" element={<MyPage />} />
               <Route path="/profileEdit" element={<ProfileEdit />} />
-              <Route path="/payment" element={<Payment />} />
+              <Route path="/payment/:id" element={<Payment />} />
               <Route path="/payment-completed" element={<PaymentCompleted />} />
+              <Route path="/payment-redirect" element={<PaymentRedirect />} />
               <Route path="/payment-failed" element={<PaymentFailed />} />
               <Route path="/payment-cancel" element={<PaymentCancel />} />
               <Route path="/product-detail/:id" element={<ProductDetail />} />
