@@ -19,26 +19,31 @@
       font-weight: bold;
       margin-bottom: 10px;
     }
-    .searchText {
-      width: 100%;
-      border-radius: 100px;
-      border: 1px solid $grey9;
-      padding: 5px 10px;
-      font-size: 13px;
-      box-shadow: none;
+    .searchInput {
+      display: flex;
+      justify-content: space-between;
 
-      :focus {
-        outline: none;
+      .searchText {
+        width: 350px;
+        border-radius: 100px;
+        border: 1px solid $grey9;
+        padding: 5px 10px;
+        font-size: 13px;
+        box-shadow: none;
+        color: $grey6;
+        &:focus {
+          outline: none;
+        }
       }
-    }
-    .goToSearchResult {
-      position: absolute;
-      right: 30px;
-      top: 52px;
-      font-size: 12px;
-      border: none;
-      background-color: inherit;
-      color: $grey9;
+
+      .goToSearchResult {
+        font-size: 12px;
+        border: none;
+        background-color: $green;
+        color: #fff;
+        border-radius: 50px;
+        padding: 0 10px;
+      }
     }
   }
 }
