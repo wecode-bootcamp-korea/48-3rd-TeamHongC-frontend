@@ -29,15 +29,17 @@ const SearchModal = () => {
     <div className="searchModal">
       <div className="modalBox">
         <p>검색어를 입력하세요.</p>
-        <input
-          type="text"
-          className="searchText"
-          value={keyword}
-          onChange={onChangeHandler}
-        />
-        <button className="goToSearchResult" onClick={goToSearchResult}>
-          검색
-        </button>
+        <div className="searchInput">
+          <input
+            type="text"
+            className="searchText"
+            value={keyword}
+            onChange={onChangeHandler}
+          />
+          <button className="goToSearchResult" onClick={goToSearchResult}>
+            검색
+          </button>
+        </div>
       </div>
     </div>
   );
