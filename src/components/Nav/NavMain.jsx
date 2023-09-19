@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
-import { HiOutlineSearch } from 'react-icons/hi';
 import SearchModal from '../SearchModal/SearchModal';
+import { HiOutlineSearch } from 'react-icons/hi';
+import { AiOutlineClose } from 'react-icons/ai';
 import './NavMain.scss';
 
 const NavMain = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const showModal = () => {
     setModalOpen(true);
+  };
+  const closeModal = () => {
+    setModalOpen(false);
   };
 
   return (
@@ -16,7 +20,12 @@ const NavMain = () => {
         <p className="title">홍시나무</p>
       </div>
       <div className="search">
-        <HiOutlineSearch className="searchIcon" onClick={showModal} />
+        {!modalOpen && (
+          <HiOutlineSearch className="searchIcon" onClick={showModal} />
+        )}
+        {modalOpen && (
+          <AiOutlineClose className="searchIcon" onClick={closeModal} />
+        )}
       </div>
       {modalOpen && <SearchModal />}
     </div>
