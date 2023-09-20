@@ -1,15 +1,28 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
+import axios from 'axios';
 import NavBack from '../../../components/Nav/NavBack';
 import Button from '../../../components/Button/Button';
 import './PaymentCancel.scss';
 
 export default function PaymentCancel() {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+
+  const productId = searchParams.get('product-id');
 
   const goToProductList = () => {
-    navigate('/product-detail');
+    navigate(`/product-detail/${productId}`);
   };
+
+  useEffect(() => {
+    const userId = localStorage.getItem('userId');
+    axios.delete(`http://localhost:3001/payment/delete?userId=1`, {
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+    });
+  }, []);
 
   return (
     <div className="paymentCompleted">

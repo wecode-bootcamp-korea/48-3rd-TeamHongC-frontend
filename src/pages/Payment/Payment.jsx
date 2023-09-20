@@ -9,10 +9,25 @@ export default function Payment() {
   const { id: productId } = useParams();
   const [paymentInfo, setPaymentInfo] = useState({});
   const [quantity, setQuantity] = useState(1);
+  const [userInfo, setUserInfo] = useState({
+    userName: '',
+    userNumber: '',
+  });
+
+  const handleInput = e => {
+    const { value, userValue } = e.target;
+    setUserInfo({ ...userInfo, [userValue]: value });
+  };
 
   const paymentUserInfo = [
-    { label: '이름', type: 'text', placeholder: '이름을 입력해주세요.' },
     {
+      id: 'userName',
+      label: '이름',
+      type: 'text',
+      placeholder: '이름을 입력해주세요.',
+    },
+    {
+      id: 'userNumber',
       label: '전화번호',
       type: 'text',
       placeholder: '전화번호를 입력해주세요.',
@@ -27,8 +42,10 @@ export default function Payment() {
       itemName: callBackName,
       totalAmount: totalPayment,
       approvalUrl: 'http://localhost:3000/payment-redirect',
-      cancelUrl: 'http://localhost:3000/payment-cancel',
-      failUrl: 'http://localhost:3000/payment-failed',
+      cancelUrl: `http://localhost:3000/payment-cancel?product-id=${productId}`,
+      failUrl: `http://localhost:3000/payment-failed?product-id=${productId}`,
+      userName: userInfo.userName,
+      userNumber: userInfo.userNumber,
     };
 
     axios
@@ -107,9 +124,11 @@ export default function Payment() {
                     {item.label}
                   </div>
                   <input
+                    id={item.id}
                     className="paymentContainerUserData"
                     type={item.type}
                     placeholder={item.placeholder}
+                    onChange={handleInput}
                   />
                 </div>
               ))}
