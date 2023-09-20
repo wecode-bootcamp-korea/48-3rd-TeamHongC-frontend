@@ -35,7 +35,10 @@ const List = ({ list }) => {
   }
 
   return (
-    <li className="list" onClick={() => navigate(`/product-detail/${list.id}`)}>
+    <li
+      className="list"
+      onClick={() => navigate(`/product-detail/${list.itemId}`)}
+    >
       <div className="listImg">
         <img src={list.imgUrl} art={list.title} className="thumbnail" />
         <div className="heartButton" onClick={handleLikeCount}>
