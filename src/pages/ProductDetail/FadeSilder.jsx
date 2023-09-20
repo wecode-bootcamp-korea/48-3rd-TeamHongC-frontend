@@ -6,7 +6,6 @@ function FadeSilder({ images }) {
   return (
     <Carousel fade className="fadeSilder">
       {images.map((img, index) => {
-        console.log(img);
         return (
           <Carousel.Item key={index}>
             <img src={img.imgUrl} alt="이미지 불러오기 실패" />

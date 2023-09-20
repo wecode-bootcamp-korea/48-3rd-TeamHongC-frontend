@@ -14,7 +14,7 @@ export default function Profile({ profileData }) {
       <div className="profileName">
         <img
           className="profileImg"
-          src={profileData.nickname}
+          src={profileData.profileImage}
           alt="프로필 사진"
         />
         <p>{profileData.nickname}</p>

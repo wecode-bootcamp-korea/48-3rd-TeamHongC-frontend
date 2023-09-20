@@ -17,8 +17,6 @@ import SalesEdit from './pages/SalesEdit/SalesEdit';
 import SalesHistory from './pages/SalesHistory/SalesHistory';
 import SearchResult from './pages/SearchResult/SearchResult';
 import SetMyLocation from './pages/SetMyLocation/SetMyLocation';
-import SignIn from './pages/SignIn/SignIn';
-import SignUp from './pages/SignUp/SignUp';
 import ViewSurroundingProducts from './pages/ViewSurroundingProducts/ViewSurroundingProducts';
 import Aside from './components/Aside/Aside';
 import Footer from './components/Footer/Footer';
@@ -44,12 +42,9 @@ const Router = () => {
               <Route path="/product-detail/:id" element={<ProductDetail />} />
               <Route path="/product-list" element={<ProductList />} />
               <Route path="/register-product" element={<RegisterProduct />} />
-              <Route path="/sales-edit" element={<SalesEdit />} />
               <Route path="/sales-history" element={<SalesHistory />} />
               <Route path="/search-result" element={<SearchResult />} />
               <Route path="/set-my-location" element={<SetMyLocation />} />
-              <Route path="/sign-in" element={<SignIn />} />
-              <Route path="/sign-up" element={<SignUp />} />
               <Route
                 path="/view-surrounging-products"
                 element={<ViewSurroundingProducts />}

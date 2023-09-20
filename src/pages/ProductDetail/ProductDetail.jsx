@@ -12,7 +12,6 @@ export default function ProductDetail() {
   const [reviewToggle, setReviewToggle] = useState(false);
   const params = useParams();
   const productId = params.id;
-  console.log(reviewData);
   const navigate = useNavigate();
   const goToBack = () => {
     navigate(-1);
@@ -27,16 +26,27 @@ export default function ProductDetail() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(
-          `http://10.58.52.64:3000/product-detail/${productId}`,
+        const productRes = await axios.get(
+          `http://localhost:3001/product-detail/${productId}`,
+          {
+            headers: {
+              'Content-Type': 'application/json;charset=utf-8',
+              Authorization: localStorage.getItem('token'),
+            },
+          },
         );
         setDetailData(productRes.data.data);
 
         const reviewRes = await axios.get(
           `http://localhost:3001/product-detail/review/${productId}`,
+          {
+            headers: {
+              'Content-Type': 'application/json;charset=utf-8',
+              Authorization: localStorage.getItem('token'),
+            },
+          },
         );
         setReviewData(reviewRes.data.data);
-        console.log(reviewRes);
       } catch (error) {
         console.error('데이터 불러오기 실패:', error);
       }

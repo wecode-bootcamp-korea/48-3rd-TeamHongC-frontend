@@ -13,11 +13,11 @@ export default function PaymentCompleted() {
     axios
       .post(
         'http://localhost:3001/payment/complete',
-        { pgToken, userId: '1' },
+        { pgToken },
         {
           headers: {
             'Content-Type': 'application/json;charset=utf-8',
-            // Authorization: localStorage.getItem('token'),
+            Authorization: localStorage.getItem('token'),
           },
         },
       )

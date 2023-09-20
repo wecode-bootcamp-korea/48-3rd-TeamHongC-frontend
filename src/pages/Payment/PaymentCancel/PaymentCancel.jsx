@@ -16,10 +16,10 @@ export default function PaymentCancel() {
   };
 
   useEffect(() => {
-    const userId = localStorage.getItem('userId');
-    axios.delete(`http://localhost:3001/payment/delete?userId=1`, {
+    axios.delete('http://localhost:3001/payment/delete', {
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
+        Authorization: localStorage.getItem('token'),
       },
     });
   }, []);
