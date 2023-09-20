@@ -5,6 +5,7 @@
   height: 50px;
   box-shadow: 0px -5px 5px $greyD;
   position: fixed;
+  z-index: 2;
   bottom: 0;
 
   .footerStyle {
