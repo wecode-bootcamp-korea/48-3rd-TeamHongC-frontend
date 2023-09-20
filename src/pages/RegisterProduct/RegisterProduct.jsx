@@ -150,7 +150,7 @@ export default function RegisterProduct() {
           {
             headers: {
               'Content-Type': 'multipart/form-data',
-              //authorization: localStorage.getItem('token'),
+              authorization: localStorage.getItem('token'),
             },
           },
         );
@@ -316,7 +316,6 @@ export default function RegisterProduct() {
           <Button
             className={inputValidation ? 'greenBtnDisabled' : 'greenBtn'}
             text="등록"
-            //disabled={inputValidation}
             onClick={goToProductList}
           />
         </div>
