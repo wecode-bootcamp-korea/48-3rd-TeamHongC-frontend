@@ -1,12 +1,13 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { useSearchParams } from 'react-router-dom';
-import { Map, MapTypeControl, MapMarker } from 'react-kakao-maps-sdk';
+import { useSearchParams, useNavigate } from 'react-router-dom';
+import { Map, MapMarker } from 'react-kakao-maps-sdk';
 import NavBack from '../../components/Nav/NavBack';
 import Button from '../../components/Button/Button';
 import './SetMyLocation.scss';
 
 const SetMyLocation = () => {
   const { kakao } = window;
+  const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const [positionAddress, setPositionAddress] = useState('');
   const [position, setPosition] = useState();
@@ -130,12 +131,16 @@ const SetMyLocation = () => {
     }
   };
 
+  const selectRegion = region1depthName + region2depthName;
   const locationSettingComplete = e => {
     e.preventDefault();
     searchParams.set('x', position.lng);
     searchParams.set('y', position.lat);
+    searchParams.set('region', selectRegion);
     setSearchParams(searchParams);
-    // navigate(`/register-product?x=`);
+    navigate(
+      `/register-product?x=${position.lng}&y=${position.lat}&region=${selectRegion}`,
+    );
   };
 
   return (
