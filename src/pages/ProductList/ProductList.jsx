@@ -28,7 +28,7 @@ const ProductList = () => {
   const conditionId = searchParams.get('condition');
 
   useEffect(() => {
-    const url = `http://10.58.52.173:3000/item/category`;
+    const url = `http://10.58.52.167:3000/itemList/category`;
     async function fetchData() {
       try {
         const response = await axios.get(url);
@@ -42,7 +42,7 @@ const ProductList = () => {
   }, [searchParams]);
 
   useEffect(() => {
-    const url = `http://10.58.52.173:3000/item/condition`;
+    const url = `http://10.58.52.167:3000/itemList/condition`;
     async function fetchData() {
       try {
         const response = await axios.get(url);
@@ -56,7 +56,7 @@ const ProductList = () => {
   }, [searchParams]);
 
   useEffect(() => {
-    const url = `http://10.58.52.173:3000/item/all?${searchParams}`;
+    const url = `http://10.58.52.167:3000/itemList/all?${searchParams}`;
     async function fetchData() {
       try {
         const response = await axios.get(url);
@@ -120,8 +120,6 @@ const ProductList = () => {
           // 주소로 좌표를 검색하고 결과를 콘솔에 출력
           const callback = (result, status) => {
             if (status === window.kakao.maps.services.Status.OK) {
-              console.log(result);
-
               const address = result[0].address.address_name;
               const firstDepthName = result[0].address.region_1depth_name;
               const secondDepthName = result[0].address.region_2depth_name;
@@ -172,7 +170,6 @@ const ProductList = () => {
   }, []);
 
   const successHandler = response => {
-    console.log(response);
     const { latitude, longitude } = response.coords;
     setCurrentLoacation({ latitude, longitude });
   };
@@ -215,7 +212,7 @@ const ProductList = () => {
         <div className="products">
           <ul>
             {productList.map(list => (
-              <List key={list.id} list={list} />
+              <List key={list.itemId} list={list} />
             ))}
           </ul>
         </div>
