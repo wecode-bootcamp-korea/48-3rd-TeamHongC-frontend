@@ -26,7 +26,6 @@ const SetMyLocation = () => {
 
   const mapRef = useRef(null);
 
-  // GeoLocation을 이용해서 속 위치를 얻어오기
   useEffect(() => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -34,16 +33,14 @@ const SetMyLocation = () => {
           setState(prev => ({
             ...prev,
             center: {
-              lat: position.coords.latitude, // 위도
-              lng: position.coords.longitude, // 경도
+              lat: position.coords.latitude,
+              lng: position.coords.longitude,
             },
             isLoading: false,
           }));
 
-          // 주소-좌표 변환 객체 생성
           const geocoder = new window.kakao.maps.services.Geocoder();
 
-          // 주소로 좌표를 검색하고 결과를 콘솔에 출력
           const callback = (result, status) => {
             if (status === window.kakao.maps.services.Status.OK) {
               console.log(result);
@@ -55,14 +52,12 @@ const SetMyLocation = () => {
               setRegion1depthName(firstDepthName);
               setRegion2depthName(secondDepthName);
 
-              // 현재 위치의 위도와 경도를 변수에 저장
               const latitude = position.coords.latitude;
               const longitude = position.coords.longitude;
               setPosition({ lat: latitude, lng: longitude });
             }
           };
 
-          // 위에서 가져온 position의 latitude와 longitude를 이용하여 주소로 변환
           geocoder.coord2Address(
             position.coords.longitude,
             position.coords.latitude,
@@ -78,7 +73,6 @@ const SetMyLocation = () => {
         },
       );
     } else {
-      // HTML5의 GeoLocation을 사용할 수 없을 때 마커 표시 위치와 인포윈도우 내용을 설정합니다
       setState(prev => ({
         ...prev,
         errMsg: 'geolocation을 사용할수 없어요..',
@@ -101,17 +95,14 @@ const SetMyLocation = () => {
     console.log(error);
   };
 
-  // 불러운 현 위치에서 다른 장소로 이동
   const mySet = (_t, mouseEvent) => {
     if (mouseEvent && mouseEvent.latLng) {
       const coords = mouseEvent.latLng;
       const latitude = coords.getLat();
       const longitude = coords.getLng();
 
-      // 주소-좌표 변환 객체 생성
       const geocoder = new window.kakao.maps.services.Geocoder();
 
-      // 주소로 좌표를 검색하고 결과를 콘솔에 출력
       const callback = (result, status) => {
         if (status === window.kakao.maps.services.Status.OK) {
           console.log(result);

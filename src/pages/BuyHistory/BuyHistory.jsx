@@ -10,11 +10,11 @@ export default function BuyHistory() {
     const axiosData = async () => {
       try {
         const response = await axios.get(
-          'http://10.58.52.129:3000/mypage/buyhistory',
+          'http://localhost:3001/mypage/buyhistory',
           {
             headers: {
               'Content-Type': 'application/json;charset=utf-8',
-              //authorization: localStorage.getItem('TOKEN'),
+              authorization: localStorage.getItem('token'),
             },
           },
         );
@@ -29,7 +29,7 @@ export default function BuyHistory() {
 
   return (
     <div className="buyHistory">
-      <NavBack title="구매내역" />c
+      <NavBack title="구매내역" />
       <div className="buyHistoryList">
         {buyData.map(buyHistory => (
           <div className="buyList" key={buyHistory.itemid}>

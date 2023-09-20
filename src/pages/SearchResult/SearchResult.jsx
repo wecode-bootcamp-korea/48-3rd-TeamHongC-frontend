@@ -11,10 +11,15 @@ const SearchResult = () => {
   const keyword = searchParams.get('keyword');
 
   useEffect(() => {
-    const url = `http://10.58.52.64:3000/items?keyword=${keyword}`;
+    const url = `http://localhost:3001/items?keyword=${keyword}`;
     async function fetchData() {
       try {
-        const response = await axios.get(url);
+        const response = await axios.get(url, {
+          headers: {
+            'Content-Type': 'application/json;charset=utf-8',
+            Authorization: localStorage.getItem('token'),
+          },
+        });
         setProductList(response.data.data);
       } catch (error) {
         console.error('데이터를 불러오는 데 실패했습니다.', error);

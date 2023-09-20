@@ -5,15 +5,22 @@ import Profile from './components/Profile';
 import LogOut from './components/LogOut';
 import { MyPageTabs } from './data/mypagedata';
 import './MyPage.scss';
+import { useNavigate } from 'react-router-dom';
 
 export default function MyPage() {
   const [myPageData, setMyPageData] = useState([]);
   const { SHOPPING_TABS, SERVICE_TABS } = MyPageTabs();
-
+  const token = localStorage.getItem('token');
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (!token) {
+      navigate('/');
+    }
+  }, []);
   useEffect(() => {
     const axiosData = async () => {
       try {
-        const response = await axios.get('http://10.58.52.129:3000/mypage', {
+        const response = await axios.get('http://localhost:3001/mypage', {
           headers: {
             'Content-Type': 'application/json;charset=utf-8',
             authorization: localStorage.getItem('token'),

@@ -7,9 +7,10 @@ import './ViewSurroundingProducts.scss';
 
 const ViewSurroundingProducts = () => {
   const { kakao } = window;
+  const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
   const location = useLocation();
-  const [searchParams, setSearchParams] = useSearchParams();
+
   const [productList, setProductList] = useState([]);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +26,6 @@ const ViewSurroundingProducts = () => {
 
   useEffect(() => {
     if (navigator.geolocation) {
-      // GeoLocation을 이용해서 접속 위치를 얻어옵니다
       navigator.geolocation.getCurrentPosition(
         position => {
           setState(prev => ({
@@ -38,9 +38,10 @@ const ViewSurroundingProducts = () => {
           }));
 
           const { latitude, longitude } = position.coords;
+
           searchParams.set('x', longitude);
           searchParams.set('y', latitude);
-          searchParams.set('radius', 100000);
+          searchParams.set('radius', 1);
           const newUrl = `${location.pathname}?${searchParams.toString()}`;
           navigate(newUrl);
         },
@@ -63,8 +64,7 @@ const ViewSurroundingProducts = () => {
   }, []);
 
   useEffect(() => {
-    const url = `http://10.58.52.64:3000/my/surround?${searchParams}`;
-
+    const url = `http://localhost:3001/my/surround?${searchParams}`;
     async function fetchData() {
       try {
         const response = await axios.get(url);
@@ -75,7 +75,7 @@ const ViewSurroundingProducts = () => {
     }
 
     fetchData();
-  }, []);
+  }, [searchParams]);
 
   const EventMarkerContainer = ({ position, content, id }) => {
     const map = useMap();
@@ -120,10 +120,7 @@ const ViewSurroundingProducts = () => {
               position={{ lat: value.latitude, lng: value.longitude }}
               content={
                 <div className="productInfo">
-                  <img
-                    src="https://t4.ftcdn.net/jpg/06/21/43/29/240_F_621432994_wFMAaVvGbXkqvy6t5w4CSY3r3zHpiQCb.jpg"
-                    className="productInfoImg"
-                  />
+                  <img src={value.imgUrl} className="productInfoImg" />
                   <div className="productText">
                     <p className="productInfoTxt">상품명 | {value.title}</p>
                     <p className="productInfoTxt">금액 | {value.price}원</p>

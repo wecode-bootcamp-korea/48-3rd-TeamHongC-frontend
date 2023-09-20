@@ -10,12 +10,11 @@ import './ProductList.scss';
 
 const geolocationOptions = {
   enableHighAccuracy: true,
-  timeout: 1000 * 60 * 1, // 1 min (1000 ms * 60 sec * 1 minute = 60 000ms)
-  maximumAge: 1000 * 3600 * 24, // 24 hour
+  timeout: 1000 * 60 * 1,
+  maximumAge: 1000 * 3600 * 24,
 };
 
 const ProductList = () => {
-  const { x, y, condition, categoryId } = useParams();
   const [searchParams, setSearchParams] = useSearchParams();
   const [productList, setProductList] = useState([]);
   const [state, setState] = useState('');
@@ -28,10 +27,16 @@ const ProductList = () => {
   const conditionId = searchParams.get('condition');
 
   useEffect(() => {
-    const url = `http://10.58.52.167:3000/itemList/category`;
+    const url = `http://localhost:3001/itemList/category`;
+    const token = localStorage.getItem('token');
     async function fetchData() {
       try {
-        const response = await axios.get(url);
+        const response = await axios.get(url, {
+          headers: {
+            'Content-Type': 'application/json;charset=utf-8',
+            Authorization: token,
+          },
+        });
         setCategoryName(response.data);
       } catch (error) {
         console.error('데이터를 불러오는 데 실패했습니다.', error);
@@ -42,10 +47,15 @@ const ProductList = () => {
   }, [searchParams]);
 
   useEffect(() => {
-    const url = `http://10.58.52.167:3000/itemList/condition`;
+    const url = `http://localhost:3001/itemList/condition`;
     async function fetchData() {
       try {
-        const response = await axios.get(url);
+        const response = await axios.get(url, {
+          headers: {
+            'Content-Type': 'application/json;charset=utf-8',
+            Authorization: localStorage.getItem('token'),
+          },
+        });
         setCategoryNew(response.data);
       } catch (error) {
         console.error('데이터를 불러오는 데 실패했습니다.', error);
@@ -56,10 +66,15 @@ const ProductList = () => {
   }, [searchParams]);
 
   useEffect(() => {
-    const url = `http://10.58.52.167:3000/itemList/all?${searchParams}`;
+    const url = `http://localhost:3001/itemList/all?${searchParams}`;
     async function fetchData() {
       try {
-        const response = await axios.get(url);
+        const response = await axios.get(url, {
+          headers: {
+            'Content-Type': 'application/json;charset=utf-8',
+            Authorization: localStorage.getItem('token'),
+          },
+        });
         setProductList(response.data);
       } catch (error) {
         console.error('데이터를 불러오는 데 실패했습니다.', error);
@@ -69,7 +84,6 @@ const ProductList = () => {
     fetchData();
   }, [searchParams]);
 
-  // 카테고리
   const [productCategory, setProductCategory] = useState('all');
   const [categoryName, setCategoryName] = useState([]);
 
@@ -79,7 +93,6 @@ const ProductList = () => {
     setSearchParams(searchParams);
   };
 
-  // 새 제품 여부 카테고리
   const [isNewCategory, setIsNewCategory] = useState('all');
   const [categoryNew, setCategoryNew] = useState([]);
 
@@ -89,13 +102,11 @@ const ProductList = () => {
     setSearchParams(searchParams);
   };
 
-  // 내 현재 위치
   const { location, cancelLocationWatch, error } =
     UseWatchLocation(geolocationOptions);
   useEffect(() => {
     if (!location) return;
 
-    // 3초후에 watch 종료
     setTimeout(() => {
       cancelLocationWatch();
     }, 3000);
@@ -114,10 +125,8 @@ const ProductList = () => {
             isLoading: false,
           }));
 
-          // 주소-좌표 변환 객체 생성
           const geocoder = new window.kakao.maps.services.Geocoder();
 
-          // 주소로 좌표를 검색하고 결과를 콘솔에 출력
           const callback = (result, status) => {
             if (status === window.kakao.maps.services.Status.OK) {
               const address = result[0].address.address_name;
@@ -127,21 +136,18 @@ const ProductList = () => {
               setRegion1depthName(firstDepthName);
               setRegion2depthName(secondDepthName);
 
-              // 현재 위치의 위도와 경도를 변수에 저장
               const latitude = position.coords.latitude;
               const longitude = position.coords.longitude;
               setPosition({ lat: latitude, lng: longitude });
             }
           };
 
-          // 위에서 가져온 position의 latitude와 longitude를 이용하여 주소로 변환
           geocoder.coord2Address(
             position.coords.longitude,
             position.coords.latitude,
             callback,
           );
 
-          // 위치 정보를 가져온 후, 쿼리 스트링에도 저장
           searchParams.set('x', position.coords.longitude);
           searchParams.set('y', position.coords.latitude);
           searchParams.set('condition', 'all');

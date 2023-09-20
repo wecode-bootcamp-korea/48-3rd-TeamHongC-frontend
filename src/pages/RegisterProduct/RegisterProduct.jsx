@@ -145,7 +145,7 @@ export default function RegisterProduct() {
         formData.append('itemCondition', selectedItemCondition);
 
         const response = await axios.post(
-          'http://10.58.52.167:3000/item',
+          'http://localhost:3001/item',
           formData,
           {
             headers: {

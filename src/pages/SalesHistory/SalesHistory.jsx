@@ -16,11 +16,11 @@ export default function SalesHistory() {
     const axiosData = async () => {
       try {
         const response = await axios.get(
-          'http://10.58.52.129:3000/mypage/salehistory',
+          'http://localhost:3001/mypage/salehistory',
           {
             headers: {
               'Content-Type': 'application/json;charset=utf-8',
-              //authorization: localStorage.getItem('token'),
+              authorization: localStorage.getItem('token'),
             },
           },
         );
@@ -33,13 +33,14 @@ export default function SalesHistory() {
     axiosData();
   }, []);
 
+  // 판매상품 삭제 - 추가사항 미구현
   const salesDeleting = item => {
     const deleteData = async () => {
       try {
         const response = await axios.delete('API', {
           headers: {
             'Content-Type': 'application/json;charset=utf-8',
-            //authorization: localStorage.getItem('token'),
+            // authorization: localStorage.getItem('token'),
           },
         });
 

@@ -5,10 +5,10 @@ import './List.scss';
 import axios from 'axios';
 
 const List = ({ list }) => {
-  const navigate = useNavigate();
   const likeStatus = list.liked === 1 ? true : false;
   const [like, setLike] = useState(likeStatus);
-  const [likeCount, setLikeCount] = useState('');
+  const [likeCount, setLikeCount] = useState(list.likeCount);
+  const navigate = useNavigate();
   const handleLike = () => {
     setLike(!like);
   };
@@ -16,34 +16,29 @@ const List = ({ list }) => {
   const handleLikeCount = e => {
     e.stopPropagation();
     handleLike();
-
     if (!like) {
       setLikeCount(likeCount + 1);
       axios.post(
-        'http://10.58.52.167:3000/like',
+        'http://localhost:3001/like/add',
         {
-          userId: 1,
           itemId: list.itemId,
         },
         {
           headers: {
-            authorization: localStorage.getItem('token'),
+            'Content-Type': 'application/json;charset=utf-8',
+            Authorization: localStorage.getItem('token'),
           },
         },
       );
     } else if (like) {
       setLikeCount(likeCount - 1);
-      axios.delete(
-        'http://10.58.52.167:3000/like',
-        {
-          data: {
-            userId: 1,
-            itemId: list.itemId,
-          },
-        },
+      axios.post(
+        'http://localhost:3001/like/erase',
+        { itemId: list.itemId },
         {
           headers: {
-            authorization: localStorage.getItem('token'),
+            'Content-Type': 'application/json;charset=utf-8',
+            Authorization: localStorage.getItem('token'),
           },
         },
       );
@@ -62,13 +57,13 @@ const List = ({ list }) => {
       <div className="listImg">
         <img src={list.imgUrl} art={list.title} className="thumbnail" />
         <div className="heartButton" onClick={handleLikeCount}>
-          {likeStatus ? <GoHeartFill /> : <GoHeart />}
+          {like ? <GoHeartFill /> : <GoHeart />}
         </div>
       </div>
       <div className="productInfo">
         <p className="productTitle">{list.title}</p>
         <div className="productSubInfo">
-          <p>좋아요 {list.likeCount} | </p>
+          <p>좋아요 {likeCount} | </p>
           <p className="review">리뷰 {list.reviewCount}</p>
         </div>
         <p className="productPrice">{list.price}원</p>

@@ -52,7 +52,7 @@ export default function Payment() {
       .post('http://localhost:3001/payment/paid', requestData, {
         headers: {
           'Content-Type': 'application/json;charset=utf-8',
-          // Authorization: localStorage.getItem('token'),
+          Authorization: localStorage.getItem('token'),
         },
       })
       .then(({ data }) => {
@@ -77,6 +77,12 @@ export default function Payment() {
       try {
         const res = await axios.get(
           `http://localhost:3001/payment/${productId}`,
+          {
+            headers: {
+              'Content-Type': 'application/json;charset=utf-8',
+              Authorization: localStorage.getItem('token'),
+            },
+          },
         );
         setPaymentInfo(res.data);
       } catch (error) {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import NavMain from '../../components/Nav/NavMain';
 import KakaoButton from './components/KakaoButton';
 import './Main.scss';
