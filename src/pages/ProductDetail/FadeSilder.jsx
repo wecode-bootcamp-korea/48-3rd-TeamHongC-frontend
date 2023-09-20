@@ -5,12 +5,15 @@ import './FadeSilder.scss';
 function FadeSilder({ images }) {
   return (
     <Carousel fade className="fadeSilder">
-      {images.map((img, index) => (
-        <Carousel.Item key={index}>
-          <img src={img.imageUrl} alt="이미지 불러오기 실패" />
-          <Carousel.Caption></Carousel.Caption>
-        </Carousel.Item>
-      ))}
+      {images.map((img, index) => {
+        console.log(img);
+        return (
+          <Carousel.Item key={index}>
+            <img src={img.imgUrl} alt="이미지 불러오기 실패" />
+            <Carousel.Caption></Carousel.Caption>
+          </Carousel.Item>
+        );
+      })}
     </Carousel>
   );
 }

@@ -77,5 +77,25 @@
 
   .productDetailReview {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .reviewContainer {
+      padding: 12px;
+      background-color: $greyD;
+      border: 1px solid $grey9;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .reviewContainerDetail {
+      padding: 12px;
+      background-color: $greyD;
+      border: 1px solid $grey9;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
