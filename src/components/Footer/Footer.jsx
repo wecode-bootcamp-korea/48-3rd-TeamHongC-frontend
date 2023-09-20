@@ -17,7 +17,7 @@ export default function Footer() {
           </Link>
         </div>
         <div className="footerIcons">
-          <Link to="/register-product" className="footerLink">
+          <Link to="/set-my-location" className="footerLink">
             상품등록
           </Link>
         </div>
