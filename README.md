@@ -1,7 +1,7 @@
 # Project HongC | 홍시나무
 위치 기반 마켓 플레이스 홍시나무
 <div align="center">
-<img src= "https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/blob/develop/public/images/main-logo.png?raw=true" style="width: 400px; height: auto;">
+<img src= "https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/blob/develop/public/images/main-logo.png?raw=true" style="width: 415px; height: 400px;">
 </div>
 
 # 💻프로젝트 소개
