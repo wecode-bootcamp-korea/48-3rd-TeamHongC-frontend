@@ -4,6 +4,9 @@
 <img src= "https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/blob/develop/public/images/main-logo.png?raw=true" style="width: 415px; height: 400px;">
 </div>
 
+## ▶️시연 영상
+[![홍시나무 시연 영상 썸네일](https://github.com/serenity1091/48-3rd-TeamHongC-frontend/assets/93922114/a7c868ef-b195-4d6a-b47e-8bd456ff13d7)](https://www.youtube.com/watch?v=N2UFzhke_48)
+
 # 💻프로젝트 소개
 ## ⏰개발 기간
 2023/ ~ 2023/
