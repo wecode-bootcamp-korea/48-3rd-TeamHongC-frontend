@@ -12,7 +12,7 @@
 2023/ ~ 2023/
 
 ## 🧑‍🤝‍🧑멤버 구성
-FE - 김슬기, 김진희, [전형민]([link](https://github.com/InnimE?tab=repositories))
+FE - 김슬기, 김진희, [전형민](https://github.com/InnimE?tab=repositories)
 
 ## 🧑‍💻서비스 소개
 
