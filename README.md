@@ -113,7 +113,7 @@
 <hr>
 
 ### 6. 결제 기능
-<img width="854" alt="6-1" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/0542bc98-f2bd-4ccd-9560-6eea9c237b7a"><img width="835" alt="6-2" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/1e7c7474-c089-476f-9961-b8f5d4e8e18c"></br>
+<img width="1445" alt="6-1" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/0542bc98-f2bd-4ccd-9560-6eea9c237b7a"><img width="1445" alt="6-2" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/1e7c7474-c089-476f-9961-b8f5d4e8e18c"></br>
  - 카카오 API를 사용
  - 백앤드와의 통신으로 상품 상태, 가격 등을 get과 post로 전달 가능
  - 결제중, 결제실패, 결제취소, 결제완료로 각각 연결될 수 있게 구현
@@ -121,7 +121,7 @@
 <hr>
 
 ### 7. 상품 등록 전 - 지도 위 내 위치 설정
-<img width="466" alt="4-1 상품등록 (위치지정)" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/133567708/2c2645ba-b311-4c64-b6de-6ed47b807bd1"></br>
+<img width="1445" alt="7" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/7aeca33f-2c07-443c-a38e-cc4a1340028a"></br>
 - 카카오맵 API를 사용하여 구매자와 거래할 위치를 설정할 수 있도록 구현
 - GeoLocation으로 현 위치를 우선 지정, 유저가 직접 거래/판매할 위치를 클릭하여 마커를 옮길 수 있도록 함
 - 마커가 원하는 위치에 정확히 찍혔는지 확인할 수 있도록 역 지오코딩을 사용하여 좌표값을 주소로 변환, 마커 위에 출력
