@@ -25,7 +25,7 @@
 - 김진희 <a href="https://github.com/jininii"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white&link=https://github.com/hongyeollee"/></a>
 - 전형민 <a href="https://github.com/InnimE?tab=repositories"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white&link=https://github.com/hongyeollee"/></a>
 
-### ## BackEnd
+### BackEnd
 - 최홍(Product Manager) <a href="https://github.com/cuihong928"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white&link=https://github.com/hongyeollee"/></a>
 - 박건률(Project Manager) <a href="https://github.com/ParkGeonRyul"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white&link=https://github.com/hongyeollee"/></a>
 - 김민수 <a href="https://github.com/minsu0717"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white&link=https://github.com/hongyeollee"/></a>
