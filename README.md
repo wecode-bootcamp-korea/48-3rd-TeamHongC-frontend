@@ -9,6 +9,10 @@
 </br>
 
 # 💻프로젝트 소개
+## 🧑‍💻서비스 소개
+- 위치 기반 마켓 플레이스 홍시나무
+</br>
+
 ## ⏰개발 기간
 2023/09/04 ~ 2023/09/22
 </br>
@@ -22,10 +26,6 @@ FE - 김슬기, 김진희, [전형민](https://github.com/InnimE?tab=repositorie
 ## 📂사용한 라이브러리
 - 리액트 아이콘 라이브러리 `$ npm install react-icons --save`
 - 카카오 리액트 `npm install react-kakao-maps-sdk`
-</br>
-
-## 🧑‍💻서비스 소개
-- 위치 기반 마켓 플레이스 홍시나무
 </br>
 
 <div align="center"><h2>🔧기술 스택</h2></div>
