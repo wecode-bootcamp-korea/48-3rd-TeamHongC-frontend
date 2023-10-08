@@ -130,7 +130,7 @@
 <hr>
 
 ### 8. 상품 등록 페이지
-<img width="607" alt="8-1" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/9de5ee66-72be-4a35-a334-e4efa7b33987"><img width="606" alt="8-2" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/1ce37184-1ece-4165-a457-09f0c3e41096"></br>
+<img width="1445" alt="8-1" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/9de5ee66-72be-4a35-a334-e4efa7b33987"><img width="1445" alt="8-2" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/b6686bfd-d8dc-431d-adcc-9f77b50af691"></br>
 - 슬기님 작성
 - 
 </br>
