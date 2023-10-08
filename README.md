@@ -18,11 +18,10 @@
 </br>
 
 ## 🧑‍🤝‍🧑멤버 구성
-FE - 김슬기, 김진희, [전형민](https://github.com/InnimE?tab=repositories)
 ### FrontEnd
 - <a href="https://github.com/serenity1091">김슬기<img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white&link=https://github.com/hongyeollee"/></a>
 - <a href="https://github.com/jininii">김진희<img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white&link=https://github.com/hongyeollee"/></a>
-- <a href="https://github.com/InnimE?tab=repositories"전형민<img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white&link=https://github.com/hongyeollee"/></a>
+- <a href="https://github.com/InnimE?tab=repositories">전형민<img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white&link=https://github.com/hongyeollee"/></a>
 </br>
 </br>
 
