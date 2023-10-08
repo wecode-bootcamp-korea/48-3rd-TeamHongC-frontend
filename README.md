@@ -19,9 +19,9 @@
 
 ## 🧑‍🤝‍🧑멤버 구성
 ### FrontEnd
-- 김슬기<a href="https://github.com/serenity1091"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white&link=https://github.com/hongyeollee"/></a>
-- 김진희<a href="https://github.com/jininii"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white&link=https://github.com/hongyeollee"/></a>
-- 전형민<a href="https://github.com/InnimE?tab=repositories"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white&link=https://github.com/hongyeollee"/></a>
+- 김슬기 <a href="https://github.com/serenity1091"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white&link=https://github.com/hongyeollee"/></a>
+- 김진희 <a href="https://github.com/jininii"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white&link=https://github.com/hongyeollee"/></a>
+- 전형민 <a href="https://github.com/InnimE?tab=repositories"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white&link=https://github.com/hongyeollee"/></a>
 </br>
 </br>
 
