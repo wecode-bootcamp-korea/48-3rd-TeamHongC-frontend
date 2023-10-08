@@ -69,6 +69,7 @@
 
 ## 📌구현 기능
 ### 1. 로그인/회원가입
+<img width="769" alt="홍시나무 시연 영상 썸네일" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/b3176e2f-21a3-4aa3-94f1-c7dc85e532c6">
 <img width="1445" alt="스크린샷 2023-10-08 181505" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/77b48f57-31cf-4841-831d-0fa43641391f"></br>
 - 카카오 API를 사용해 구현 / 기대효과 / 고민과 해결방안 / 이미지 등
 <hr>
