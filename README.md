@@ -120,7 +120,7 @@
 </br>
 <hr>
 
-### 7. 상품 등록 전 - 지도 위 내 위치 설정
+### 7. 상품 등록 전 - 지도 위 상품 판매 위치 설정
 <img width="1445" alt="7" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/7aeca33f-2c07-443c-a38e-cc4a1340028a"></br>
 - 카카오맵 API를 사용하여 구매자와 거래할 위치를 설정할 수 있도록 구현
 - GeoLocation으로 현 위치를 우선 지정, 유저가 직접 거래/판매할 위치를 클릭하여 마커를 옮길 수 있도록 함
