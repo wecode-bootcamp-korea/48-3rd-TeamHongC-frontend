@@ -109,7 +109,7 @@
 <hr>
 
 ### 검색기능
-<img width="495" alt="2-5 상품 검색 기능" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/133567708/f899921a-2a87-4289-8a67-34a5ac7fd3f1"></br>
+<img width="666" alt="스크린샷 2023-10-08 174810" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/89fbac52-d18c-4720-a90e-2580a5988b2b"></br>
 - 상단의 돋보기 아이콘을 눌러 검색창 모달을 띄움
 - 빈 칸 상태로 검색을 진행 시, 1글자 이상 입력을 요구하는 경고메시지 출력
 - 정상적으로 검색 진행 시, 검색 키워드를 리스트 상단에 띄워 유저가 확인할 수 있고, 키워드에 해당되는 상품을 리스트로 출력
