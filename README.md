@@ -69,11 +69,11 @@
 
 ## 📌구현 기능
 ### 1. 로그인/회원가입
-<hr>
 <img width="1325" alt="스크린샷 2023-10-08 172222" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/869e429e-23b0-4031-b487-ff5a506b409b"></br>
 - 카카오 API를 사용해 구현 / 기대효과 / 고민과 해결방안 / 이미지 등
+<hr>
   
-### 상품리스트(메인)
+### 2. 상품리스트(메인)
 <img width="505" alt="2-1 상품리스트" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/133567708/9420d2d7-f8c4-4721-a499-c458bb7206ea">
 
 - GPS 또는 네트워크를 이용해 현재 위치 정보를 반환하는 HTML5 GeoLocation API 사용하여 유저의 현 위치를 확인
