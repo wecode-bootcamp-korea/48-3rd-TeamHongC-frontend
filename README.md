@@ -70,7 +70,7 @@
 ## 📌구현 기능
 ### 1. 로그인/회원가입
 <img width="1445" alt="스크린샷 2023-10-08 181805" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/4655bfda-5ab7-4338-a78f-cf11db1a8686">
-<img width="645" alt="스크린샷 2023-10-08 182745" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/790a5cdf-f5b8-46ba-995d-240613ef3558">
+<img width="1445" alt="스크린샷 2023-10-08 182745" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/790a5cdf-f5b8-46ba-995d-240613ef3558">
 </br>
 - 카카오 API를 사용해 구현 / 기대효과 / 고민과 해결방안 / 이미지 등
 <hr>
