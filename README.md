@@ -144,10 +144,7 @@
 <hr>
 
 ### 10. 마이 페이지 - 구매내역/판매내역/로그아웃
-
-
-
-</br>
+<img width="1445" alt="10-1" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/f52bdc1a-57ea-4e11-96f3-91da86126e87"><img width="1445" alt="10-2" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/ba117e3c-39f3-43ae-98c8-469957386f89"></br>
 - 슬기님 작성
 - 
 </br>
