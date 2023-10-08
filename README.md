@@ -71,7 +71,7 @@
 ### 1. 로그인/회원가입
 <img width="1325" alt="스크린샷 2023-10-08 172222" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/869e429e-23b0-4031-b487-ff5a506b409b"></br>
 - 카카오 API를 사용해 구현 / 기대효과 / 고민과 해결방안 / 이미지 등
-<hr style="height: 10px;">
+<hr style="height: 0px;">
   
 ### 2. 상품리스트(메인)
 <img width="505" alt="2-1 상품리스트" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/133567708/9420d2d7-f8c4-4721-a499-c458bb7206ea">
