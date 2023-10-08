@@ -10,6 +10,7 @@
 </br>
 
 # 💻프로젝트 소개
+</br>
 ## 🧑‍💻서비스 소개
 - 위치 기반 마켓 플레이스 홍시나무
 </br>
@@ -30,7 +31,6 @@
 - 김민수 <a href="https://github.com/minsu0717"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white&link=https://github.com/hongyeollee"/></a>
 - 김수영 <a href="https://github.com/egosyk"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white&link=https://github.com/hongyeollee"/></a>
 - 임홍규 <a href="https://github.com/LimHongs"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white&link=https://github.com/hongyeollee"/></a>
-</br>
 </br>
 
 ## 📂사용한 라이브러리
