@@ -74,7 +74,7 @@
 </br>
 <hr>
   
-### 2. 상품리스트(메인)
+### 2. 상품 리스트(메인)
 <img width="1445" alt="스크린샷 2023-10-08 184122" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/3047ec40-f01b-4863-b231-789300b517c9"></br>
 - GPS 또는 네트워크를 이용해 현재 위치 정보를 반환하는 HTML5 GeoLocation API 사용하여 유저의 현 위치를 확인
 - GeoLocation으로 만든 Hook을 이용해 반복적으로 3초마다 현 위치를 확인하여 좌표값 재설정
@@ -96,7 +96,7 @@
 </br>
 <hr>
 
-### 4. 검색기능
+### 4. 검색 기능
 <img width="1445" alt="스크린샷 2023-10-08 184850" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/024567fc-4dec-4c65-92c1-fb08097358a0"></br>
 - 상단의 돋보기 아이콘을 눌러 검색창 모달을 띄움
 - 빈 칸 상태로 검색을 진행 시, 1글자 이상 입력을 요구하는 경고메시지 출력
@@ -111,7 +111,7 @@
 </br>
 <hr>
 
-### 결제
+### 6. 결제 기능
 <img width="1414" alt="스크린샷 2023-10-08 174110" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/0ffc23eb-42a9-441a-806b-5f1a539d3359"></br>
  - 카카오 API를 사용
  - 백앤드와의 통신으로 상품 상태, 가격 등을 get과 post로 전달 가능
@@ -119,11 +119,40 @@
 </br>
 <hr>
 
-### 상품 등록 전 - 지도 위 내 위치 설정
+### 7. 상품 등록 전 - 지도 위 내 위치 설정
 <img width="466" alt="4-1 상품등록 (위치지정)" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/133567708/2c2645ba-b311-4c64-b6de-6ed47b807bd1"></br>
 - 카카오맵 API를 사용하여 구매자와 거래할 위치를 설정할 수 있도록 구현
 - GeoLocation으로 현 위치를 우선 지정, 유저가 직접 거래/판매할 위치를 클릭하여 마커를 옮길 수 있도록 함
 - 마커가 원하는 위치에 정확히 찍혔는지 확인할 수 있도록 역 지오코딩을 사용하여 좌표값을 주소로 변환, 마커 위에 출력
 - 위치 지정 완료 버튼을 누르면 지정한 위치 좌표값을 쿼리스트링으로 상품 등록 페이지에 전달
 </br>
+<hr>
 
+### 8. 상품 등록 페이지
+
+
+
+</br>
+- 슬기님 작성
+- 
+</br>
+<hr>
+
+### 9. 마이 페이지 - 구매내역/판매내역
+
+
+
+</br>
+- 슬기님 작성
+- 
+</br>
+<hr>
+
+### 10. 마이 페이지 - 로그아웃
+
+
+
+</br>
+- 슬기님 작성
+- 
+</br>
