@@ -69,6 +69,7 @@
 
 ## 📌구현 기능
 ### 1. 로그인/회원가입
+</hr>
 <img width="1325" alt="스크린샷 2023-10-08 172222" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/869e429e-23b0-4031-b487-ff5a506b409b"></br>
 - 카카오 API를 사용해 구현 / 기대효과 / 고민과 해결방안 / 이미지 등
   
