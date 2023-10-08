@@ -74,7 +74,7 @@
 <hr>
   
 ### 2. 상품리스트(메인)
-<img width="505" alt="2-1 상품리스트" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/133567708/9420d2d7-f8c4-4721-a499-c458bb7206ea"></br>
+<img width="1346" alt="스크린샷 2023-10-08 175040" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/f0ce51a3-6447-45da-b348-bd198480a63e"></br>
 - GPS 또는 네트워크를 이용해 현재 위치 정보를 반환하는 HTML5 GeoLocation API 사용하여 유저의 현 위치를 확인
 - GeoLocation으로 만든 Hook을 이용해 반복적으로 3초마다 현 위치를 확인하여 좌표값 재설정
 - 반경 1km 내 판매중인 상품리스트를 출력
