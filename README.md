@@ -83,21 +83,21 @@
 - 찜하기 기능으로 리스트 페이지에서 상품이 보이지 않더라도 찜한 상품을 보여주는 별도의 페이지에서 확인할 수 있도록 구현
 <hr>  
 
-### 결제
-<img width="1414" alt="스크린샷 2023-10-08 174110" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/0ffc23eb-42a9-441a-806b-5f1a539d3359"></br>
- - 카카오 API를 사용
- - 백앤드와의 통신으로 상품 상태, 가격 등을 get과 post로 전달 가능
- - 결제중, 결제실패, 결제취소, 결제완료로 각각 연결될 수 있게 구현
-<hr>
-
-### 내 주변 상품보기
-<img width="491" alt="2-4 내주변 상품 보기" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/133567708/26eff33f-16e0-41aa-9f4e-dd95bdfe56ed"></br>
+### 3. 내 주변 상품보기
+<img width="641" alt="스크린샷 2023-10-08 175646" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/97426609-d4c3-40a3-b334-9f030e00150b"></br>
 - 현재 유저의 위치와 판매중인 상품을 시각적으로 보여주기 위해 카카오맵 API를 사용하여 지도 위 마커를 띄우는 UI를 구현
 - GeoLocation API를 사용하여 현 위치를 자동으로 불러오고, 쿼리스트링으로 좌표값을 서버로 전달
 - 좌표값 기준 반경 1km 내 판매중인 상품을 지도 위 마커로 표시
 - 마커 표시된 상품은 메인에서 보이는 상품리스트와 동일
 - 마커 위 hover시 판매상품의 간단한 정보를 볼 수 있고, 클릭 시 상세피이지로 이동
 - 모바일 유저의 사용을 고려하여 마커 위 hover가 아닌 클릭 시 정보를 볼 수 있도록 수정이 필요해 보임
+<hr>
+
+### 결제
+<img width="1414" alt="스크린샷 2023-10-08 174110" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/0ffc23eb-42a9-441a-806b-5f1a539d3359"></br>
+ - 카카오 API를 사용
+ - 백앤드와의 통신으로 상품 상태, 가격 등을 get과 post로 전달 가능
+ - 결제중, 결제실패, 결제취소, 결제완료로 각각 연결될 수 있게 구현
 <hr>
 
 ### 상품 등록 전 - 지도 위 내 위치 설정
