@@ -25,6 +25,7 @@ FE - 김슬기, 김진희, [전형민](https://github.com/InnimE?tab=repositorie
 </br>
 
 ## 🧑‍💻서비스 소개
+- 위치 기반 마켓 플레이스 홍시나무
 </br>
 
 <div align="center"><h2>🔧기술 스택</h2></div>
