@@ -69,7 +69,6 @@
 
 ## 📌구현 기능
 ### 1. 로그인/회원가입
-<img width="769" alt="홍시나무 시연 영상 썸네일" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/b3176e2f-21a3-4aa3-94f1-c7dc85e532c6">
 <img width="1445" alt="스크린샷 2023-10-08 181505" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/77b48f57-31cf-4841-831d-0fa43641391f"></br>
 - 카카오 API를 사용해 구현 / 기대효과 / 고민과 해결방안 / 이미지 등
 <hr>
@@ -85,7 +84,7 @@
 <hr>  
 
 ### 3. 내 주변 상품보기
-<img width="644" alt="스크린샷 2023-10-08 180011" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/1d14b791-5442-4de9-9690-3bbde2e343ff"></br>
+<img width="998" alt="스크린샷 2023-10-08 180011" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/1d14b791-5442-4de9-9690-3bbde2e343ff"></br>
 - 현재 유저의 위치와 판매중인 상품을 시각적으로 보여주기 위해 카카오맵 API를 사용하여 지도 위 마커를 띄우는 UI를 구현
 - GeoLocation API를 사용하여 현 위치를 자동으로 불러오고, 쿼리스트링으로 좌표값을 서버로 전달
 - 좌표값 기준 반경 1km 내 판매중인 상품을 지도 위 마커로 표시
