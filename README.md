@@ -5,7 +5,7 @@
 </div>
 
 ## ▶️시연 영상
-[![홍시나무 시연 영상 썸네일](https://github.com/serenity1091/images/blob/main/48-3rd-TeamHongC-frontend/%ED%99%8D%EC%8B%9C%EB%82%98%EB%AC%B4%20%EC%8B%9C%EC%97%B0%20%EC%98%81%EC%83%81%20%EC%8D%B8%EB%84%A4%EC%9D%BC.png?raw=true)](https://www.youtube.com/watch?v=N2UFzhke_48)
+[![홍시나무 시연 영상 썸네일](https://github.com/serenity1091/images/blob/main/48-3rd-TeamHongC-frontend/%ED%99%8D%EC%8B%9C%EB%82%98%EB%AC%B4%20%EC%8D%B8%EB%84%A4%EC%9D%BC.png?raw=true)](https://www.youtube.com/watch?v=N2UFzhke_48)
 </br>
 </br>
 
