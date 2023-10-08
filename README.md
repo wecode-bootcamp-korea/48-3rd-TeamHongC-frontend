@@ -113,7 +113,7 @@
 <hr>
 
 ### 6. 결제 기능
-<img width="1414" alt="스크린샷 2023-10-08 174110" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/0ffc23eb-42a9-441a-806b-5f1a539d3359"></br>
+<img width="835" alt="6-2" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/1e7c7474-c089-476f-9961-b8f5d4e8e18c"></br>
  - 카카오 API를 사용
  - 백앤드와의 통신으로 상품 상태, 가격 등을 get과 post로 전달 가능
  - 결제중, 결제실패, 결제취소, 결제완료로 각각 연결될 수 있게 구현
