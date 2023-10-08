@@ -6,20 +6,25 @@
 
 ## ▶️시연 영상
 [![홍시나무 시연 영상 썸네일](https://github.com/serenity1091/images/blob/main/48-3rd-TeamHongC-frontend/%ED%99%8D%EC%8B%9C%EB%82%98%EB%AC%B4%20%EC%8B%9C%EC%97%B0%20%EC%98%81%EC%83%81%20%EC%8D%B8%EB%84%A4%EC%9D%BC.png?raw=true)](https://www.youtube.com/watch?v=N2UFzhke_48)
+</br>
 
 # 💻프로젝트 소개
 ## ⏰개발 기간
 2023/09/04 ~ 2023/09/22
 </br>
+
 ## 🧑‍🤝‍🧑멤버 구성
 FE - 김슬기, 김진희, [전형민](https://github.com/InnimE?tab=repositories)
 </br>
+
 ## 📂사용한 라이브러리
 - 리액트 아이콘 라이브러리 `$ npm install react-icons --save`
 - 카카오 리액트 `npm install react-kakao-maps-sdk`
 </br>
+
 ## 🧑‍💻서비스 소개
 </br>
+
 <div align="center"><h3>🔧기술 스택</h3></div>
 <div align="center">FRONTEND</div>
 <div align="center">
