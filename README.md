@@ -104,6 +104,13 @@
 </br>
 <hr>
 
+### 5. 제품 상세 페이지
+<img width="628" alt="5" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/d89e3df1-f9af-4977-955b-39ba2ba54d9e"></br>
+- 형민님 작성
+- 
+</br>
+<hr>
+
 ### 결제
 <img width="1414" alt="스크린샷 2023-10-08 174110" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/0ffc23eb-42a9-441a-806b-5f1a539d3359"></br>
  - 카카오 API를 사용
