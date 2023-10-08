@@ -20,7 +20,7 @@ FE - 김슬기, 김진희, [전형민](https://github.com/InnimE?tab=repositorie
 
 ## 🧑‍💻서비스 소개
 
-<div align="center"><h1>🔧STACKS</h1></div>
+## 🔧기술 스택
   </br>
 <div align="center">FRONTEND</div>
   <div align="center">
