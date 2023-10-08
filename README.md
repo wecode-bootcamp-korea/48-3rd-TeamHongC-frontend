@@ -17,6 +17,7 @@
 ## 🧑‍🤝‍🧑멤버 구성
 FE - 김슬기, 김진희, [전형민](https://github.com/InnimE?tab=repositories)
 </br>
+</br>
 
 ## 📂사용한 라이브러리
 - 리액트 아이콘 라이브러리 `$ npm install react-icons --save`
@@ -26,7 +27,7 @@ FE - 김슬기, 김진희, [전형민](https://github.com/InnimE?tab=repositorie
 ## 🧑‍💻서비스 소개
 </br>
 
-<div align="center"><h3>🔧기술 스택</h3></div>
+<div align="center"><h2>🔧기술 스택</h2></div>
 </br>
 <div align="center">FRONTEND</div>
 <div align="center">
