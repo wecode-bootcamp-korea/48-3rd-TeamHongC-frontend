@@ -74,7 +74,7 @@
 <hr>
   
 ### 2. 상품리스트(메인)
-<img width="998" alt="스크린샷 2023-10-08 180412" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/e9555239-2f13-4ea1-a06a-4408494bd12c"></br>
+<img width="1445" alt="스크린샷 2023-10-08 180412" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/e9555239-2f13-4ea1-a06a-4408494bd12c"></br>
 - GPS 또는 네트워크를 이용해 현재 위치 정보를 반환하는 HTML5 GeoLocation API 사용하여 유저의 현 위치를 확인
 - GeoLocation으로 만든 Hook을 이용해 반복적으로 3초마다 현 위치를 확인하여 좌표값 재설정
 - 반경 1km 내 판매중인 상품리스트를 출력
@@ -84,7 +84,7 @@
 <hr>  
 
 ### 3. 내 주변 상품보기
-<img width="998" alt="스크린샷 2023-10-08 180011" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/1d14b791-5442-4de9-9690-3bbde2e343ff"></br>
+<img width="1445" alt="스크린샷 2023-10-08 180011" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/1d14b791-5442-4de9-9690-3bbde2e343ff"></br>
 - 현재 유저의 위치와 판매중인 상품을 시각적으로 보여주기 위해 카카오맵 API를 사용하여 지도 위 마커를 띄우는 UI를 구현
 - GeoLocation API를 사용하여 현 위치를 자동으로 불러오고, 쿼리스트링으로 좌표값을 서버로 전달
 - 좌표값 기준 반경 1km 내 판매중인 상품을 지도 위 마커로 표시
