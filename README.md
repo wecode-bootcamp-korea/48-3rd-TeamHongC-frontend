@@ -137,7 +137,7 @@
 <hr>
 
 ### 9. 상품 등록 후 - 지도 위 '내주변' 상품에서 확인 가능
-<img width="1445" alt="9" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/6c4dec85-13b2-4143-8d9b-5ec868160dce"></br>
+<img width="1445" alt="9" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/5587da16-d7ca-468f-841a-0736c36ebcaa"></br>
 - 진희님 작성
 - 
 </br>
