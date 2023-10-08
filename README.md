@@ -105,7 +105,7 @@
 <hr>
 
 ### 5. 제품 상세 페이지
-<img width="628" alt="5" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/d89e3df1-f9af-4977-955b-39ba2ba54d9e"></br>
+<img width="1445" alt="5" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/d89e3df1-f9af-4977-955b-39ba2ba54d9e"></br>
 - 형민님 작성
 - 
 </br>
