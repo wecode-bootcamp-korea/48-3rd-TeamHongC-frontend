@@ -107,8 +107,9 @@
 
 ### 5. 제품 상세 페이지
 <img width="1445" alt="5" src="https://github.com/wecode-bootcamp-korea/48-3rd-TeamHongC-frontend/assets/93922114/d89e3df1-f9af-4977-955b-39ba2ba54d9e"></br>
-- 형민님 작성
-- 
+- 슬라이드 라이브러리 사용 (클릭시 다음 사진으로 이동)
+- axios를 이용한 백앤드와의 통신으로 상품들의 상태확인 & 정보를 불러옴
+- 토글버튼 클릭시 후기를 불러올 수 있음
 </br>
 <hr>
 
