@@ -1,0 +1,51 @@
+@import '../../../styles/variables.scss';
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  .profileName {
+    display: flex;
+    align-items: center;
+
+    .profileImg {
+      width: 42px;
+      height: 42px;
+    }
+
+    p {
+      display: inline-block;
+      margin-left: 10px;
+      font-size: 16px;
+      color: $black;
+      font-weight: 600;
+    }
+
+    .salesMark {
+      transform: translateY(9%);
+      margin-left: 5px;
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  .profileBtn {
+    display: flex;
+
+    button {
+      padding: 5px 10px;
+      border: 1px solid $greyD;
+      border-radius: 25px;
+      background-color: white;
+      font-size: 12px;
+      color: $grey9;
+    }
+
+    button:hover {
+      border: 1px solid $black;
+      color: $black;
+    }
+  }
+}

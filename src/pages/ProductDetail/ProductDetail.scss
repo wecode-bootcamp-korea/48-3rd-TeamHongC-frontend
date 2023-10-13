@@ -1,0 +1,101 @@
+@import '../../styles/variables.scss';
+
+.productDetail {
+  position: relative;
+
+  .goToBack {
+    position: absolute;
+    top: 18px;
+    left: 27px;
+    z-index: 1;
+
+    .goToBackIcon {
+      font-size: 24px;
+      color: $greyF;
+
+      cursor: pointer;
+    }
+  }
+  .productImgContainer {
+    width: 440px;
+    height: 380px;
+    display: flex;
+    overflow: hidden;
+  }
+  .productDetailContainerBox {
+    padding: 20px;
+
+    .productDetailContainer {
+      display: flex;
+      justify-content: space-between;
+      line-height: 1.5;
+      border-bottom: 1px solid $greyD;
+      padding-bottom: 20px;
+
+      .productDetailInfo {
+        .productDetailItemCondition {
+          font-size: 10px;
+          color: $grey6;
+        }
+        .productDetailTitle {
+          font-size: 18px;
+        }
+        .productDetailSaleInfo {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+
+          .productDetailSalePrice {
+            font-size: 16px;
+          }
+          .productDetailSaleItemCount {
+            font-size: 12px;
+            color: $grey6;
+          }
+        }
+      }
+
+      .productDetailUserInfo {
+        text-align: end;
+        .productDetailUserNickname {
+          font-size: 14px;
+        }
+        .productDetailUserRegion {
+          color: $grey6;
+          font-size: 12px;
+        }
+        .productDetailUserDate {
+          color: $grey6;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+  .productDetailDescription {
+    padding: 20px;
+  }
+
+  .productDetailReview {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .reviewContainer {
+      padding: 12px;
+      background-color: $greyD;
+      border: 1px solid $grey9;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .reviewContainerDetail {
+      padding: 12px;
+      background-color: $greyD;
+      border: 1px solid $grey9;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

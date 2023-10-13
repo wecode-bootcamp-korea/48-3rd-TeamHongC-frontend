@@ -1,0 +1,44 @@
+@import '../../../styles/variables.scss';
+
+.loggingIn {
+  display: flex;
+  justify-content: center;
+
+  .navMain {
+    position: fixed;
+    width: 440px;
+
+    @media screen and (max-width: 400px) {
+      .logo {
+        margin-left: 25px;
+      }
+    }
+
+    @media screen and (max-width: 280px) {
+      .logo {
+        margin-left: 65px;
+      }
+    }
+
+    .search {
+      display: none;
+    }
+  }
+
+  .loggingImg {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: $black;
+    font-size: 16px;
+    font-weight: 600;
+    padding-top: 200px;
+    height: 440px;
+
+    img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+}

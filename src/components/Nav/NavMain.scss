@@ -1,0 +1,38 @@
+@import '../../styles/variables.scss';
+
+.navMain {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  color: $green;
+  border-bottom: 1px solid $greyF;
+  background-color: white;
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    .logoImage {
+      width: 36px;
+    }
+
+    .title {
+      margin-left: 10px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+
+  .search {
+    .searchIcon {
+      font-size: 24px;
+      color: $green;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import '../../styles/variables.scss';
+
+.category {
+  margin-top: 8px;
+  ul {
+    display: flex;
+    flex-direction: row;
+
+    li {
+      margin-left: 6px;
+
+      &:first-child {
+        margin: 0 0 10px 0;
+      }
+    }
+
+    .notSelect {
+      font-size: 13px;
+      color: $grey6;
+      border: 1px solid $greyD;
+      border-radius: 100px;
+      padding: 5px 10px;
+      background-color: #fff;
+    }
+
+    .select {
+      font-size: 13px;
+      color: #fff;
+      border: 1px solid $orange;
+      border-radius: 100px;
+      padding: 5px 10px;
+      background-color: $orange;
+    }
+  }
+}

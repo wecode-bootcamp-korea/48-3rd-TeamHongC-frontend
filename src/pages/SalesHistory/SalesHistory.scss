@@ -1,0 +1,67 @@
+@import '../../styles/variables.scss';
+
+.salesHistory {
+  .salesHistoryList {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+
+    .salesList {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      width: 100%;
+
+      .salesProductTitle {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px;
+        font-size: 16px;
+
+        .salesProductPrice {
+          font-weight: 600;
+        }
+      }
+
+      .salesPaymentBgColor {
+        margin: 0 20px;
+        background-color: $greyF;
+        border-top: 1px solid $greyD;
+        border-bottom: 1px solid $greyD;
+        font-size: 14px;
+
+        .sales {
+          margin: 20px 10px;
+          display: flex;
+          justify-content: space-between;
+
+          .salesEditBtn {
+            display: flex;
+
+            .editBtn {
+              margin-right: 8px;
+              cursor: pointer;
+
+              &:hover {
+                color: $green;
+              }
+            }
+
+            .btnDivision {
+              border-right: 1px solid black;
+            }
+
+            .deleteBtn {
+              margin-left: 8px;
+              cursor: pointer;
+
+              &:hover {
+                color: $green;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

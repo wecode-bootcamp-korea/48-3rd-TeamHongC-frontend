@@ -1,0 +1,8 @@
+[
+  {
+    "id": 1,
+    "categoryName": "전체"
+  },
+  { "id": 2, "categoryName": "식품" },
+  { "id": 3, "categoryName": "가구" }
+]

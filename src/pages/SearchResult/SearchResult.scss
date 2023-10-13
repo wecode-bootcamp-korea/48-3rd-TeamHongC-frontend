@@ -1,0 +1,25 @@
+@import '../../styles/variables.scss';
+
+.search {
+  .searchContainer {
+    padding: 20px 20px 80px;
+    .keywordResult {
+      margin-top: 20px;
+
+      .keyword {
+        font-weight: bold;
+      }
+    }
+    .products {
+      ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .productSubInfo {
+          display: none;
+        }
+      }
+    }
+  }
+}

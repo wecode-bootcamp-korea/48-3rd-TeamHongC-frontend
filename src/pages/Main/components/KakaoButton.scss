@@ -1,0 +1,25 @@
+@import '../../../styles/variables.scss';
+
+.kakaoBtn {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  height: 45px;
+  background: #fee500;
+  border: none;
+  border-radius: 25px;
+  color: $black;
+  font-size: 15px;
+  font-weight: 800;
+  box-shadow:
+    0 19px 38px rgba(0, 0, 0, 0.3),
+    0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.kakaoBtn:hover {
+  background: #ffd500;
+}
+
+.kakaoBtn:active {
+  background: #ffc500;
+}
